@@ -42,11 +42,22 @@ export default function Hero() {
   return (
     <main className="h-screen overflow-y-hidden">
       <div className="h-full relative">
-        <canvas className="absolute" id="gradient-canvas" data-transition-in></canvas>
-        <div ref={ref} className="absolute h-full">
-          <h2>Graphics</h2>
-          <h2>Code</h2>
-          <h2>Data</h2>
+        <canvas
+          className="absolute"
+          id="gradient-canvas"
+          data-transition-in
+        ></canvas>
+        <div
+          ref={ref}
+          className="absolute h-full w-full flex flex-col items-center justify-center"
+        >
+          <h2 className="text-4xl xl:text-9xl font-bold text-slate-50">Graphics</h2>
+          <h2 className="text-4xl xl:text-9xl font-bold text-slate-50">Code</h2>
+          <h2 className="text-4xl xl:text-9xl font-bold text-slate-50">Data</h2>
+          <p className="mx-4 text-slate-50 text-center place-self-">
+            Hi, I’m Jamil. I am a fullstack developer, graphic designer and data
+            analyst based in Ghana
+          </p>
         </div>
       </div>
     </main>
