@@ -42,10 +42,13 @@ export default function Hero() {
             <h2 ref={headerText} className="invisible mx-4 xl:mx-20 text-4xl xl:text-9xl font-bold text-slate-50">
               SOFTWARE DEVELOPER
             </h2>
+            <div> 
+              <div></div>
             <p ref={secText} className="invisible mx-4 xl:mx-20 text-slate-50 text-lg xl:text-2xl">
               Hello, Jamil here<span className="text-[#EC9021]">.</span> <br />I
               am a freelance fullstack developer based in in Ghana.
             </p>
+            </div>
           </div>
         </div>
       </div>

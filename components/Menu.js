@@ -43,9 +43,9 @@ export default function Menu({ toggle }) {
           id="lower"
           className="invisible bottom-0 h-1/2 bg-[#4e54c8]"
         ></div>
-        <div className="absolute top-0  w-full h-full flex items-center px-10 xl:px-20">
+        <div className="absolute top-0  w-full h-full flex flex-col justify-center px-10 xl:px-20">
           <ul className="text-slate-50 font-bold text-4xl space-y-6">
-            <li className="hover:cursor-pointer invisible overflow-hidden xl:text-7xl" ref={home}>
+            <li className="hover:cursor-pointer hover:translate-y-5 invisible overflow-hidden xl:text-7xl" ref={home}>
               <span className="text-sm xl:text-3xl">01</span>HOME
             </li>
             <li className="hover:cursor-pointer invisible overflow-hidden xl:text-7xl" ref={work}>

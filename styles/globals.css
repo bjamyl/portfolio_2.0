@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 
 @layer components {
   #gradient-canvas {
@@ -9,5 +10,14 @@
     --gradient-color-1: #b5b9ff;
     --gradient-color-2: #4e54c8;
     --gradient-color-3: #4e54c8;
-    --gradient-color-4: #4e54c8;  }
+    --gradient-color-4: #4e54c8;
+  }
 }
+
+h1,
+h2,
+h3,
+h4,li {
+  font-family: "Montserrat", sans-serif;
+}
+
