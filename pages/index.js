@@ -9,7 +9,7 @@ export default function Home() {
   const ref = useRef(null);
   const options = {
     smooth: true,
-    mobile: {
+    smartphone: {
       smooth: true,
     },
     tablet: {
