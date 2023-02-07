@@ -14,9 +14,6 @@ module.exports = {
         sans: ["var(--font-syne)"],
         body: ["var(--font-mulish)"],
       },
-      backgroundImage: {
-        darkBG: "url('/bg.jpg')",
-      },
     },
   },
   plugins: [],
