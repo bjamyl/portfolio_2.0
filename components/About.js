@@ -4,19 +4,27 @@ export default function About() {
   return (
     <main
       data-scroll-container
-      className="bg-[#1C1D1F] h-screen flex flex-col gap-12  justify-center"
+      className="bg-[#1C1D1F] h-screen flex flex-col gap-12 justify-center"
     >
-      <p className="mx-4 text-4xl font-body text-slate-50 xl:mx-96">
-        Hi, I am Jamil and I am a fullstack web developer but I tend to do a lot
-        more heavy lifting on the frontend with a focus on adding value to
-        design through simplicity and clarity
-      </p>
-      <p className="mx-4 text-4xl font-body text-slate-50 xl:mx-96 ">
-        I turn design into pixel-perfect, responsive web applications. I have
-        been working as a freelance graphic designer for the past 3 years, and
-        in that time I worked closely with small business owners to craft unique
-        brand identities that tell their story and grow their brand.
-      </p>
+      <div className="h-2/4 flex flex-col justify-between">
+        <div className="space-y-4">
+          <h1 className="mx-4 text-4xl font-sans text-slate-50 xl:mx-96 xl:text-6xl">
+            I add value to design <br /> through{" "}
+            <span className="text-[#ED9022]">simplicity</span> &{" "}
+            <span className="text-[#ED9022]">clarity</span>
+          </h1>
+          <p className="mx-4 font-body text-lg text-slate-50 xl:mx-96 xl:text-xl">
+            I relish the challenge of turning ideas in unforgettable digital
+            experiences. Every business has unique needs, and it is my job to
+            understand those needs and design solutions that{" "}
+            <span className="text-slate-400">scale</span> and{" "}
+            <span className="text-slate-400">boost revenue</span>.
+          </p>
+        </div>
+        <div className="mx-4 xl:mx-96">
+          <div className="w-full h-1 bg-[#ED9022]"></div>
+        </div>
+      </div>
     </main>
   );
 }
