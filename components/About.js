@@ -8,7 +8,12 @@ export default function About() {
     >
       <div className="h-2/4 flex flex-col justify-between">
         <div className="space-y-4">
-          <h1 className="mx-4 text-4xl font-sans text-slate-50 xl:mx-96 xl:text-6xl">
+          <h1
+            data-scroll
+            data-scroll-class="fadeIn"
+            data-scroll-repeat="true"
+            className="op-class mx-4 text-4xl font-sans text-slate-50 xl:mx-96 xl:text-6xl"
+          >
             I add value to design <br /> through{" "}
             <span className="text-[#ED9022]">simplicity</span> &{" "}
             <span className="text-[#ED9022]">clarity</span>
