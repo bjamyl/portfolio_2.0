@@ -9,36 +9,39 @@ export default function Card({ title, description, image }) {
   const desTxt = useRef();
 
   // Creating the timeline
-  const tl = useRef();
-  useEffect(() => {
-    tl.current = gsap
-      .timeline()
-      .to(slider.current, {
-        width: 0,
-        duration: 0.4,
-        delay: 5,
-        ease: Power3.easeInOut,
-      })
-      .to(photo.current, {
-        scale: 1.03,
-        duration: 0.5,
-        ease: Power3.easeInOut,
-      })
-      .from(headTxt.current, { autoAlpha: 0, y: 10, duration: 0.2 }, "-=0.1")
-      .from(desTxt.current, { autoAlpha: 0, y: 10, duration: 0.2 });
-  }, []);
+  // const tl = useRef();
+  // useEffect(() => {
+  //   tl.current = gsap
+  //     .timeline()
+  //     .to(slider.current, {
+  //       width: 0,
+  //       duration: 0.4,
+  //       delay: 5,
+  //       ease: Power3.easeInOut,
+  //     })
+  //     .to(photo.current, {
+  //       scale: 1.03,
+  //       duration: 0.5,
+  //       ease: Power3.easeInOut,
+  //     })
+  //     .from(headTxt.current, { autoAlpha: 0, y: 10, duration: 0.2 }, "-=0.1")
+  //     .from(desTxt.current, { autoAlpha: 0, y: 10, duration: 0.2 });
+  // }, []);
 
   return (
-    <section className="" id="main">
-      <div id="container" className="">
+    <section  className="md:">
+      <div id="container" className="mx-4 lg:mx-10 xl:mx-20">
         <>
           <div
             id="img-container"
-            className="w-full h-[250px] overflow-hidden relative"
+            className="w-full h-[250px] md:h-[450px] lg:h-[500px] overflow-hidden relative"
           >
             <div
               ref={slider}
-              className="w-full h-full absolute top-0 left-0 bg-[#1C1D1F] z-10"
+              data-scroll
+              data-scroll-repeat="false"
+              data-scroll-class="slide"
+              className="slider-class w-full absolute top-0 left-0 bg-[#1C1D1F] z-10"
             ></div>
             <img
               ref={photo}
@@ -49,17 +52,14 @@ export default function Card({ title, description, image }) {
           </div>
         </>
         <div className="overflow-hidden h-fit">
-          <h3
-            ref={headTxt}
-            className="font-sans invisible  text-slate-50 mx-4 text-2xl"
-          >
+          <h3 ref={headTxt} className="font-sans   text-slate-50 mx-4 text-2xl">
             {title}
           </h3>
         </div>
         <div className="overflow-hidden h-fit">
           <p
             ref={desTxt}
-            className="mx-4  invisible font-body text-slate-50 font-light text-lg"
+            className="mx-4   font-body text-slate-50 font-light text-lg"
           >
             {description}
           </p>

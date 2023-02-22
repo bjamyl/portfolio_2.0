@@ -12,6 +12,8 @@ export default function Home() {
     smooth: true,
     smartphone: {
       smooth: true,
+      multiplier: 10
+      
     },
     tablet: {
       smooth: true,
@@ -34,9 +36,9 @@ export default function Home() {
         <section data-scroll-section>
           <About />
         </section>
-        <section data-scroll-section >
+        {/* <section data-scroll-section >
           <Works />
-        </section>
+        </section> */}
       </div>
     </LocomotiveScrollProvider>
   );

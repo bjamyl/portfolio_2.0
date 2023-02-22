@@ -6,10 +6,10 @@
   #gradient-canvas {
     width: 100%;
     height: 100%;
-    --gradient-color-1: #b5b9ff;
-    --gradient-color-2: #4e54c8;
-    --gradient-color-3: #4e54c8;
-    --gradient-color-4: #4e54c8;
+    --gradient-color-1: #ed9022;
+    --gradient-color-2: #1c1d1f;
+    --gradient-color-3: #1c1d1f;
+    --gradient-color-4: #1c1d1f;
   }
 }
 
@@ -95,11 +95,19 @@ html.has-scroll-dragging {
   bottom: 0;
 }
 
-.op-class{
+/* .op-class {
   opacity: 0;
 }
 .fadeIn {
   opacity: 1;
-  transition: opacity 2s ;
+  transition: opacity 2s;
+} */
+
+.slider-class {
+  height: 100%;
 }
 
+.slide{
+  height: 0%;
+  transition: height 1s ease-out;
+}

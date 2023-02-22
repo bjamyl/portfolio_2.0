@@ -42,12 +42,12 @@ export default function Menu({ toggle }) {
         <div
           ref={topHalf}
           id="upper"
-          className="invisible top-0  h-1/2 bg-[#4e54c8]"
+          className="invisible top-0  h-1/2 bg-[#1C1D1F]"
         ></div>
         <div
           ref={bottomHalf}
           id="lower"
-          className="invisible bottom-0 h-1/2 bg-[#4e54c8]"
+          className="invisible bottom-0 h-1/2 bg-[#1C1D1F]"
         ></div>
         <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20">
           <div className="h-2/4 flex flex-col justify-between">
