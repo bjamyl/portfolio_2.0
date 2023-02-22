@@ -1,7 +1,8 @@
 import { useRef, useEffect } from "react";
 import gsap, { Power3 } from "gsap/dist/gsap";
+import Image from "next/image";
 
-export default function Card({title, description, image}) {
+export default function Card({ title, description, image }) {
   const slider = useRef();
   const photo = useRef();
   const headTxt = useRef();
@@ -23,7 +24,7 @@ export default function Card({title, description, image}) {
         duration: 0.5,
         ease: Power3.easeInOut,
       })
-      .from(headTxt.current, { autoAlpha: 0, y: 10, duration: 0.2 },'-=0.1')
+      .from(headTxt.current, { autoAlpha: 0, y: 10, duration: 0.2 }, "-=0.1")
       .from(desTxt.current, { autoAlpha: 0, y: 10, duration: 0.2 });
   }, []);
 
@@ -48,7 +49,10 @@ export default function Card({title, description, image}) {
           </div>
         </>
         <div className="overflow-hidden h-fit">
-          <h3 ref={headTxt} className="font-sans invisible  text-slate-50 mx-4 text-2xl">
+          <h3
+            ref={headTxt}
+            className="font-sans invisible  text-slate-50 mx-4 text-2xl"
+          >
             {title}
           </h3>
         </div>

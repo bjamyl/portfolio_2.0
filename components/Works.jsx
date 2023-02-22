@@ -16,17 +16,17 @@ export default function Works() {
         <Card
           title={"Real Estate"}
           description={"Development"}
-          image={"/images/max.jpg"}
+          image={"/images/m.webp"}
         />
         <Card
           title={"GameShop"}
           description={"Development"}
-          image={"/images/jonna.jpg"}
+          image={"/images/j.webp"}
         />
         <Card
           title={"Beyond October"}
           description={"Brand Design"}
-          image={"/images/shubam.jpg"}
+          image={"/images/s.webp"}
         />
       </div>
     </section>
