@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 
 export default function Works() {
   return (
@@ -7,55 +8,27 @@ export default function Works() {
         data-scroll
         data-scroll-sticky
         data-scroll-target="#stick"
-        className="mx-4 text-7xl text-slate-50 font-sans pt-20"
+        className="mx-4 text-7xl text-center text-slate-50 font-sans pt-20 z-50"
       >
         <span className="text-xl">02</span>WORK
       </h1>
-      <p className="text-6xl">
-        I am a creative developer who relishes the challenge of turning ideas in
-        unforgettable digital experiences. I have worked as an independent
-        graphic designer for over 3 years and this love for beautiful and slick
-        visuals resonates in my web applications. I specialize in front-end
-        development but I like to get my hands dirty with backends too. My
-        expertise also spans logo and flyer design, video ad development, and
-        illustrations.
-      </p>
-      <p className="text-6xl">
-        I am a creative developer who relishes the challenge of turning ideas in
-        unforgettable digital experiences. I have worked as an independent
-        graphic designer for over 3 years and this love for beautiful and slick
-        visuals resonates in my web applications. I specialize in front-end
-        development but I like to get my hands dirty with backends too. My
-        expertise also spans logo and flyer design, video ad development, and
-        illustrations.
-      </p>
-      <p className="text-6xl">
-        I am a creative developer who relishes the challenge of turning ideas in
-        unforgettable digital experiences. I have worked as an independent
-        graphic designer for over 3 years and this love for beautiful and slick
-        visuals resonates in my web applications. I specialize in front-end
-        development but I like to get my hands dirty with backends too. My
-        expertise also spans logo and flyer design, video ad development, and
-        illustrations.
-      </p>
-      <p className="text-6xl">
-        I am a creative developer who relishes the challenge of turning ideas in
-        unforgettable digital experiences. I have worked as an independent
-        graphic designer for over 3 years and this love for beautiful and slick
-        visuals resonates in my web applications. I specialize in front-end
-        development but I like to get my hands dirty with backends too. My
-        expertise also spans logo and flyer design, video ad development, and
-        illustrations.
-      </p>
-      <p className="text-6xl">
-        I am a creative developer who relishes the challenge of turning ideas in
-        unforgettable digital experiences. I have worked as an independent
-        graphic designer for over 3 years and this love for beautiful and slick
-        visuals resonates in my web applications. I specialize in front-end
-        development but I like to get my hands dirty with backends too. My
-        expertise also spans logo and flyer design, video ad development, and
-        illustrations.
-      </p>
+      <div className="flex flex-col gap-4">
+        <Card
+          title={"Real Estate"}
+          description={"Development"}
+          image={"/images/max.jpg"}
+        />
+        <Card
+          title={"GameShop"}
+          description={"Development"}
+          image={"/images/jonna.jpg"}
+        />
+        <Card
+          title={"Beyond October"}
+          description={"Brand Design"}
+          image={"/images/shubam.jpg"}
+        />
+      </div>
     </section>
   );
 }
