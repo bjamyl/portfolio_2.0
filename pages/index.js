@@ -7,39 +7,57 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
 
 export default function Home() {
-  const ref = useRef(null);
-  const options = {
-    smooth: true,
-    smartphone: {
-      smooth: true,
-      multiplier: 10
-      
-    },
-    tablet: {
-      smooth: true,
-    },
-  };
+  // const ref = useRef(null);
+  // const options = {
+  //   smooth: true,
+  //   smartphone: {
+  //     smooth: true,
+  //     multiplier: 10,
+  //   },
+  //   tablet: {
+  //     smooth: true,
+  //   },
+  // };
   return (
-    <LocomotiveScrollProvider options={options} containerRef={ref}>
-      <div ref={ref} data-scroll-container>
-        <Head>
-          <title>
-            Jamil Alhassan | Fullstack Engineer, Data Analyst & Graphic Designer
-          </title>
-          <meta name="description" content="This is my portfolio website" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Navbar />
-        <section data-scroll-section data-scroll data-scroll-speed="4">
-          <Hero />
-        </section>
-        <section data-scroll-section>
-          <About />
-        </section>
-        {/* <section data-scroll-section >
-          <Works />
-        </section> */}
-      </div>
-    </LocomotiveScrollProvider>
+    // <LocomotiveScrollProvider options={options} containerRef={ref}>
+    //   <div ref={ref} data-scroll-container>
+    //     <Head>
+    //       <title>
+    //         Jamil Alhassan | Fullstack Engineer, Data Analyst & Graphic Designer
+    //       </title>
+    //       <meta name="description" content="This is my portfolio website" />
+    //       <link rel="icon" href="/favicon.ico" />
+    //     </Head>
+    //     <Navbar />
+    //     <section data-scroll-section data-scroll data-scroll-speed="4">
+    //       <Hero />
+    //     </section>
+    //     {/* <section data-scroll-section>
+    //       <About />
+    //     </section>
+    //     <section data-scroll-section>
+    //       <About />
+    //     </section> */}
+    //     <section data-scroll-section >
+    //       <Works />
+    //     </section>
+    //     <section data-scroll-section >
+    //       <Works />
+    //     </section>
+    //   </div>
+    // </LocomotiveScrollProvider>
+    <div>
+      <Head>
+        <title>
+          Jamil Alhassan | Fullstack Engineer, Data Analyst & Graphic Designer
+        </title>
+        <meta name="description" content="This is my portfolio website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
+      <Hero />
+      <About />
+      <Works />
+    </div>
   );
 }

@@ -103,11 +103,11 @@ html.has-scroll-dragging {
   transition: opacity 2s;
 } */
 
-.slider-class {
+/* .slider-class {
   height: 100%;
 }
 
 .slide{
   height: 0%;
   transition: height 1s ease-out;
-}
+} */
