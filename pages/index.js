@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Navbar from "../components/Navbar";
+import Works from "../components/Works";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
 
@@ -32,6 +33,9 @@ export default function Home() {
         </section>
         <section data-scroll-section>
           <About />
+        </section>
+        <section data-scroll-section >
+          <Works />
         </section>
       </div>
     </LocomotiveScrollProvider>
