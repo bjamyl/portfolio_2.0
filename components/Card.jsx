@@ -43,10 +43,13 @@ export default function Card({ title, description, image }) {
               data-scroll-class="slide"
               className="slider-class w-full absolute top-0 left-0 bg-[#1C1D1F] z-10"
             ></div> */}
-            <img
+            <Image
               ref={photo}
               src={image}
               alt="image"
+              width={1980}
+              height={1080}
+              priority
               className="absolute top-0 left-0"
             />
           </div>

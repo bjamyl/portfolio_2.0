@@ -1,9 +1,12 @@
 import Head from "next/head";
-import {Navbar, Hero, About, Works} from '../components'
+import { Navbar, Hero, About, Works } from "../components";
 import { useEffect } from "react";
+import { isFirefox } from "react-device-detect";
 import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
+  const value = isFirefox ? 2 : 6;
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -11,9 +14,9 @@ export default function Home() {
       direction: "vertical", // vertical, horizontal
       gestureDirection: "vertical", // vertical, horizontal, both
       smooth: true,
-      mouseMultiplier: 2,
+      mouseMultiplier: value,
       smoothTouch: false,
-      touchMultiplier: 2,
+      touchMultiplier: value,
       infinite: false,
     });
 
