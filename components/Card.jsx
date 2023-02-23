@@ -31,7 +31,7 @@ export default function Card({ title, description, image }) {
   return (
     <section ref={trig} className="">
       <>
-        <div className="w-full h-[250px] md:h-[450px] lg:h-[500px] overflow-hidden relative">
+        <div className="hover:cursor-pointer w-full h-[250px] md:h-[450px] lg:h-[500px] overflow-hidden relative">
           <div
             ref={slider}
             data-scroll

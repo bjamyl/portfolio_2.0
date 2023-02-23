@@ -1,10 +1,10 @@
 import { Navbar, Hero, About, Works, Layout } from "../components";
 import { useEffect } from "react";
-import { isFirefox, isAndroid, isIOS } from "react-device-detect";
+import { isFirefox, isAndroid, isMobile } from "react-device-detect";
 import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
-  const value = isAndroid ? 20 : 6;
+  const value = isFirefox ? 2 : 10;
 
   
 
@@ -16,9 +16,9 @@ export default function Home() {
       direction: "vertical", // vertical, horizontal
       gestureDirection: "vertical", // vertical, horizontal, both
       smooth: true,
-      mouseMultiplier: value,
+      mouseMultiplier: isMobile ? 30 : value,
       smoothTouch: true,
-      touchMultiplier: value,
+      touchMultiplier: isMobile ? 30 : value,
       infinite: false,
     });
 
