@@ -1,12 +1,14 @@
-import Head from "next/head";
-import { Navbar, Hero, About, Works } from "../components";
+import { Navbar, Hero, About, Works, Layout } from "../components";
 import { useEffect } from "react";
-import { isFirefox } from "react-device-detect";
+import { isFirefox, isAndroid, isIOS } from "react-device-detect";
 import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
-  const value = isFirefox ? 2 : 6;
+  const value = isAndroid ? 20 : 6;
 
+  
+
+ 
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -15,7 +17,7 @@ export default function Home() {
       gestureDirection: "vertical", // vertical, horizontal, both
       smooth: true,
       mouseMultiplier: value,
-      smoothTouch: false,
+      smoothTouch: true,
       touchMultiplier: value,
       infinite: false,
     });
@@ -34,18 +36,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <Head>
-        <title>
-          Jamil Alhassan | Fullstack Engineer, Data Analyst & Graphic Designer
-        </title>
-        <meta name="description" content="This is my portfolio website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
       <Navbar />
       <Hero />
       <About />
       <Works />
-    </div>
+    </Layout>
   );
 }
