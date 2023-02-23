@@ -30,19 +30,19 @@ export default function Card({ title, description, image }) {
 
   return (
     <section  className="md:">
-      <div id="container" className="mx-4 lg:mx-10 xl:mx-20">
+      <div id="container" className="">
         <>
           <div
             id="img-container"
             className="w-full h-[250px] md:h-[450px] lg:h-[500px] overflow-hidden relative"
           >
-            <div
+            {/* <div
               ref={slider}
               data-scroll
               data-scroll-repeat="false"
               data-scroll-class="slide"
               className="slider-class w-full absolute top-0 left-0 bg-[#1C1D1F] z-10"
-            ></div>
+            ></div> */}
             <img
               ref={photo}
               src={image}

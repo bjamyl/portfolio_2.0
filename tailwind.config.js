@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-syne)"],
-        body: ["var(--font-mulish)"],
+        body: ["var(--font-inter)"],
       },
     },
   },

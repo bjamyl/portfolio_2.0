@@ -1,51 +1,36 @@
 import Head from "next/head";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Navbar from "../components/Navbar";
-import Works from "../components/Works";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useRef } from "react";
+import {Navbar, Hero, About, Works} from '../components'
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
-  // const ref = useRef(null);
-  // const options = {
-  //   smooth: true,
-  //   smartphone: {
-  //     smooth: true,
-  //     multiplier: 10,
-  //   },
-  //   tablet: {
-  //     smooth: true,
-  //   },
-  // };
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      direction: "vertical", // vertical, horizontal
+      gestureDirection: "vertical", // vertical, horizontal, both
+      smooth: true,
+      mouseMultiplier: 2,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    //get scroll value
+    lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+      console.log({ scroll, limit, velocity, direction, progress });
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
-    // <LocomotiveScrollProvider options={options} containerRef={ref}>
-    //   <div ref={ref} data-scroll-container>
-    //     <Head>
-    //       <title>
-    //         Jamil Alhassan | Fullstack Engineer, Data Analyst & Graphic Designer
-    //       </title>
-    //       <meta name="description" content="This is my portfolio website" />
-    //       <link rel="icon" href="/favicon.ico" />
-    //     </Head>
-    //     <Navbar />
-    //     <section data-scroll-section data-scroll data-scroll-speed="4">
-    //       <Hero />
-    //     </section>
-    //     {/* <section data-scroll-section>
-    //       <About />
-    //     </section>
-    //     <section data-scroll-section>
-    //       <About />
-    //     </section> */}
-    //     <section data-scroll-section >
-    //       <Works />
-    //     </section>
-    //     <section data-scroll-section >
-    //       <Works />
-    //     </section>
-    //   </div>
-    // </LocomotiveScrollProvider>
     <div>
       <Head>
         <title>

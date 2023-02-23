@@ -44,7 +44,7 @@ export default function Hero() {
             </h2>
             <div> 
               <div></div>
-            <p ref={secText} className="invisible font-body font-semibold mx-4 lg:mx-10 xl:mx-20 2xl:mx-20 text-slate-50 text-lg 2xl:text-2xl">
+            <p ref={secText} className="invisible font-body  mx-4 lg:mx-10 xl:mx-20 2xl:mx-20 text-slate-50 text-lg 2xl:text-2xl">
               Hello, Jamil here<span className="text-[#EC9021]">.</span> <br />I
               am a freelance fullstack developer based in in Ghana.
             </p>

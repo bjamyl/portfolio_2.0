@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import { gsap } from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
-import { Syne, Mulish, Raleway, Quicksand } from "@next/font/google";
+import { Syne, Cormorant_Garamond, Poppins } from "@next/font/google";
 gsap.registerPlugin(CSSPlugin);
 
 const syne = Syne({
@@ -9,14 +9,15 @@ const syne = Syne({
   variable: '--font-syne'
 });
 
-const mulish = Quicksand({
+const inter = Poppins({
   subsets: ['latin'],
-  variable: '--font-mulish'
+  variable: '--font-inter',
+  weight: ['100','200','300', '400']
 })
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main className={`${syne.variable}  ${mulish.variable}`}>
+    <main className={`${syne.variable}  ${inter.variable}`}>
       <Component {...pageProps} />
     </main>
   );
