@@ -1,6 +1,6 @@
 import { Navbar, Hero, About, Works, Layout } from "../components";
 import { useEffect } from "react";
-import { isFirefox, isAndroid, isMobile } from "react-device-detect";
+import { isFirefox, } from "react-device-detect";
 import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
