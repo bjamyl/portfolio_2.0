@@ -11,23 +11,40 @@ export default function About() {
   const line = useRef();
   const trig = useRef();
   const tl = useRef();
+  const textTl = useRef();
 
   // Initializing animation
   useEffect(() => {
     tl.current = gsap
       .timeline({
         scrollTrigger: {
-          trigger: trig.current,
+          trigger: bodyText1.current,
           // markers: true,
           start: "top 50%",
-          scrub: true
+          scrub: true,
         },
       })
-      .from(headerText1.current, { autoAlpha: 0, y: 50 })
-      .from(headerText2.current, { autoAlpha: 0, y: 50 })
       .from(bodyText1.current, { autoAlpha: 0, opacity: 1 })
       .from(bodyText2.current, { autoAlpha: 0, opacity: 1 })
       .to(line.current, { width: "100%" });
+  }, []);
+
+  useEffect(() => {
+    textTl.current = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top 50%",
+          markers: true,
+          
+        },
+      })
+      .from(headerText1.current, { autoAlpha: 0, y: 50, duration: 0.5 })
+      .from(
+        headerText2.current,
+        { autoAlpha: 0, y: 50, duration: 0.5 },
+        "-=0.25"
+      );
   }, []);
 
   return (
@@ -35,7 +52,7 @@ export default function About() {
       <main className="h-screen flex flex-col gap-12 justify-center">
         <div className="h-2/4 flex flex-col justify-between">
           <div className="space-y-4">
-            <div ref={trig} className="overflow-hidden h-fit">
+            <div ref={trig} className="border overflow-hidden h-fit">
               <h2
                 ref={headerText1}
                 className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-96 2xl:text-6xl"
@@ -52,7 +69,7 @@ export default function About() {
             </div>
             <p
               ref={bodyText1}
-              className="invisible mx-4 font-light md:mx-8 lg:mx-16 xl:mx-20 font-body text-lg text-slate-50 2xl:mx-96 2xl:text-xl"
+              className="border invisible mx-4 font-light md:mx-8 lg:mx-16 xl:mx-20 font-body text-lg text-slate-50 2xl:mx-96 2xl:text-xl"
             >
               I am a creative developer who relishes the challenge of turning
               ideas in unforgettable digital experiences. I have worked as an
@@ -72,7 +89,7 @@ export default function About() {
               <span className="text-slate-400">boost revenue</span>.
             </p>
           </div>
-          <div  className="mx-4 xl:mx-96 hidden md:block">
+          <div className="mx-4 xl:mx-96 hidden md:block">
             <div ref={line} className="w-0 h-[1.5px] bg-[#ED9022]"></div>
           </div>
         </div>
