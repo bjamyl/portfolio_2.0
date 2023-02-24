@@ -12,24 +12,23 @@ export default function About() {
   const tl = useRef();
 
   // Initializing animation
-  // useEffect(() => {
-  //   tl.current = gsap
-  //     .timeline({
-  //       scrollTrigger: {
-  //         trigger: trig.current,
-  //         // markers: true,
-  //         start: "top 50%",
-  //       },
-  //     })
-  //     .from(headerText1.current, { autoAlpha: 0, y: 50, duration: 0.5 })
-  //     .from(
-  //       headerText2.current,
-  //       { autoAlpha: 0, y: 50, duration: 0.5 },
-  //       "-=0.25"
-  //     )
-  //     .from(bodyText1.current, { autoAlpha: 0, opacity: 1 })
-  //     .from(bodyText2.current, { autoAlpha: 0, opacity: 1 })
-  // }, []);
+  useEffect(() => {
+    tl.current = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top 50%",
+        },
+      })
+      .from(headerText1.current, { autoAlpha: 0, y: 50, duration: 0.5 })
+      .from(
+        headerText2.current,
+        { autoAlpha: 0, y: 50, duration: 0.5 },
+        "-=0.25"
+      )
+      .from(bodyText1.current, { autoAlpha: 0, opacity: 1 })
+      .from(bodyText2.current, { autoAlpha: 0, opacity: 1 })
+  }, []);
 
   return (
     <main className="my-20 flex flex-col gap-12 justify-center">
@@ -38,13 +37,13 @@ export default function About() {
           <div ref={trig} className="overflow-hidden h-fit">
             <h2
               ref={headerText1}
-              className=" mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-96 2xl:text-6xl"
+              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-96 2xl:text-6xl"
             >
               I add value to design
             </h2>
             <h2
               ref={headerText2}
-              className=" mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-96 2xl:text-6xl"
+              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-96 2xl:text-6xl"
             >
               through<span className="text-[#ED9022]">simplicity</span> &
               <span className="text-[#ED9022]">clarity</span>
@@ -52,7 +51,7 @@ export default function About() {
           </div>
           <p
             ref={bodyText1}
-            className=" mx-4 font-light md:mx-8 lg:mx-16 xl:mx-20 font-body text-lg text-slate-50 2xl:mx-96 2xl:text-xl"
+            className="text-base invisible leading-relaxed mx-4 font-light md:mx-8 lg:mx-16 xl:mx-20 font-body  text-slate-50 2xl:mx-96 2xl:text-xl"
           >
             I am a creative developer who relishes the challenge of turning
             ideas in unforgettable digital experiences. I have worked as an
@@ -64,7 +63,7 @@ export default function About() {
           </p>
           <p
             ref={bodyText2}
-            className=" mx-4 font-light md:mx-8 lg:mx-16 font-body text-lg text-slate-50 2xl:mx-96 2xl:text-xl"
+            className="text-base invisible leading-relaxed mx-4 font-light md:mx-8 lg:mx-16 font-body  text-slate-50 2xl:mx-96 2xl:text-xl"
           >
             Every business has unique needs, and it is my job to understand
             those needs and design solutions that{" "}

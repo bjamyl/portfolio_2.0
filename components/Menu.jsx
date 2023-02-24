@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 
 export default function Menu({ toggle }) {
@@ -24,12 +25,12 @@ export default function Menu({ toggle }) {
       .from(topHalf.current, { autoAlpha: 0, x: -700, duration: 0.2 })
       .from(bottomHalf.current, { autoAlpha: 0, x: 700, duration: 0.2 })
       .from(home.current, { autoAlpha: 0, x: -50, duration: 0.2 })
-      .from(work.current, { autoAlpha: 0, x: -50, duration: 0.2 },'-=0.1')
-      .from(about.current, { autoAlpha: 0, x: -50, duration: 0.2 },'-=0.1')
-      .from(contact.current, { autoAlpha: 0, x: -50, duration: 0.2 },'-=0.1')
-      .from(linkedin.current, { autoAlpha: 0, x: -50, duration: 0.2 },'-=0.1')
-      .from(twitter.current, { autoAlpha: 0, x: -50, duration: 0.2 }, '-=0.1')
-      .from(dribble.current, { autoAlpha: 0, x: -50, duration: 0.2 },'-=0.1');
+      .from(work.current, { autoAlpha: 0, x: -50, duration: 0.2 }, "-=0.1")
+      .from(about.current, { autoAlpha: 0, x: -50, duration: 0.2 }, "-=0.1")
+      .from(contact.current, { autoAlpha: 0, x: -50, duration: 0.2 }, "-=0.1")
+      .from(linkedin.current, { autoAlpha: 0, x: -50, duration: 0.2 }, "-=0.1")
+      .from(twitter.current, { autoAlpha: 0, x: -50, duration: 0.2 }, "-=0.1")
+      .from(dribble.current, { autoAlpha: 0, x: -50, duration: 0.2 }, "-=0.1");
   }, []);
 
   useEffect(() => {
@@ -56,25 +57,33 @@ export default function Menu({ toggle }) {
                 className="hover:cursor-pointer font-sans hover:translate-y-5 invisible overflow-hidden xl:text-7xl"
                 ref={home}
               >
-                <span className="text-sm xl:text-3xl">01</span>HOME
+                <Link href="/">
+                  <span className="text-sm xl:text-3xl">01</span>HOME
+                </Link>
               </li>
               <li
                 className="hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl"
                 ref={work}
               >
-                <span className="text-sm xl:text-3xl">02</span>WORK
+                <Link href="/work">
+                  <span className="text-sm xl:text-3xl">02</span>WORK
+                </Link>
               </li>
               <li
                 className="hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl"
                 ref={about}
               >
-                <span className="text-sm xl:text-3xl">03</span>ABOUT
+                <Link href="/about">
+                  <span className="text-sm xl:text-3xl">03</span>ABOUT{" "}
+                </Link>
               </li>
               <li
                 className="hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl"
                 ref={contact}
               >
-                <span className="text-sm xl:text-3xl">04</span>CONTACT
+                <Link href="/contact">
+                  <span className="text-sm xl:text-3xl">04</span>CONTACT
+                </Link>
               </li>
             </ul>
             <ul className="flex gap-4">
