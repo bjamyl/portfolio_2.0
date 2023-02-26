@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap, { Power4 } from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Card from "./Card";
-import Tile from "./Tile";
+import projects from "./data";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Works() {
@@ -39,7 +39,7 @@ export default function Works() {
         </h1>
       </div>
       <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-20 mx-4 lg:mx-10 xl:mx-20 2xl:gap-x-20">
-        <Card
+        {/* <Card
           title={"Real Estate"}
           description={"Development"}
           image={"/images/jonna.jpg"}
@@ -53,13 +53,17 @@ export default function Works() {
           title={"Beyond October"}
           description={"Brand Design"}
           image={"/images/max.jpg"}
-        />
+        /> */}
+        {projects &&
+          projects.map((project) => (
+            <Card
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+            />
+          ))}
       </div>
-      {/* <div className="space-y-10 md:space-y-20 xl:space-y-24 2xl:space-y-28">
-        <Tile description={"Development"} title={"Real Estate"} />
-        <Tile description={"Development"} title={"GameShop"} />
-        <Tile description={"Brand Design"} title={"Beyond October"} />
-      </div> */}
     </section>
   );
 }

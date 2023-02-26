@@ -30,7 +30,7 @@ export default function Card({ title, description, image }) {
 
   return (
     <section ref={trig} className="">
-      <>
+      <div className="">
         <div className="hover:cursor-pointer w-full h-[250px] md:h-[450px] lg:h-[500px] overflow-hidden relative">
           <div
             ref={slider}
@@ -43,24 +43,32 @@ export default function Card({ title, description, image }) {
             ref={photo}
             src={image}
             alt="image"
-            width={1980}
-            height={1080}
-            className="absolute top-0 left-0"
+            // width={1980}
+            // height={1080}
+            fill
+            style={{objectFit:"cover"}}
+            className="absolute top-0 left-0 object-fill"
           />
         </div>
-      </>
-      <div className="overflow-hidden h-fit">
-        <h3 ref={headTxt} className="invisible font-sans text-slate-50 mx-4 text-2xl">
-          {title}
-        </h3>
       </div>
-      <div className="overflow-hidden h-fit">
-        <p
-          ref={desTxt}
-          className="invisible mx-4 font-body text-slate-50 font-light text-lg"
-        >
-          {description}
-        </p>
+      {/* text-section */}
+      <div className="flex justify-between items-baseline">
+        <div className="overflow-hidden h-fit">
+          <h3
+            ref={headTxt}
+            className="invisible font-sans text-slate-50 text-2xl"
+          >
+            {title}
+          </h3>
+        </div>
+        <div className="overflow-hidden h-fit">
+          <p
+            ref={desTxt}
+            className="invisible mx-4 font-body text-slate-50 font-light text-lg"
+          >
+            {description}
+          </p>
+        </div>
       </div>
     </section>
   );
