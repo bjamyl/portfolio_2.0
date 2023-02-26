@@ -45,7 +45,6 @@ export default function Card({ title, description, image }) {
             alt="image"
             width={1980}
             height={1080}
-            priority
             className="absolute top-0 left-0"
           />
         </div>

@@ -4,7 +4,7 @@ import { CSSPlugin } from "gsap/CSSPlugin";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { LoadingScreen } from "../components";
-import { Syne, Cormorant_Garamond, Poppins } from "@next/font/google";
+import { Syne, MuseoModerno, Poppins } from "@next/font/google";
 gsap.registerPlugin(CSSPlugin);
 
 const syne = Syne({

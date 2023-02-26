@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap, { Power4 } from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Card from "./Card";
+import Tile from "./Tile";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Works() {
@@ -28,7 +29,7 @@ export default function Works() {
 
   return (
     <section ref={trigger}>
-      <div className="h-fit overflow-hidden">
+      <div className="h-fit overflow-hidden mb-10">
         <h1
           ref={text}
           className="mx-4 text-7xl text-right  md:text-8xl lg:mx-10 xl:mx-20 text-slate-50 font-sans"
@@ -41,19 +42,24 @@ export default function Works() {
         <Card
           title={"Real Estate"}
           description={"Development"}
-          image={"/images/m.webp"}
+          image={"/images/jonna.jpg"}
         />
         <Card
           title={"GameShop"}
           description={"Development"}
-          image={"/images/j.webp"}
+          image={"/images/shubam.jpg"}
         />
         <Card
           title={"Beyond October"}
           description={"Brand Design"}
-          image={"/images/s.webp"}
+          image={"/images/max.jpg"}
         />
       </div>
+      {/* <div className="space-y-10 md:space-y-20 xl:space-y-24 2xl:space-y-28">
+        <Tile description={"Development"} title={"Real Estate"} />
+        <Tile description={"Development"} title={"GameShop"} />
+        <Tile description={"Brand Design"} title={"Beyond October"} />
+      </div> */}
     </section>
   );
 }
