@@ -32,13 +32,12 @@ export default function Works() {
       <div className="h-fit overflow-hidden mb-10">
         <h1
           ref={text}
-          className="mx-4 text-7xl text-right  md:text-8xl lg:mx-10 xl:mx-20 text-slate-50 font-sans"
+          className="mx-4 font-bold text-7xl text-right md:text-8xl lg:mx-10 xl:mx-20 text-slate-50 font-sans"
         >
-          <span className="text-xl  md:text-2xl  ">02</span>
-          WORK
+          WORKS
         </h1>
       </div>
-      <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-20 mx-4 lg:mx-10 xl:mx-20 2xl:gap-x-20">
+      <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-32 mx-4 lg:mx-10 xl:mx-20 2xl:gap-x-20">
         {/* <Card
           title={"Real Estate"}
           description={"Development"}

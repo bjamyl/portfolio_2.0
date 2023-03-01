@@ -30,26 +30,13 @@ export default function Extras() {
               ref={headerTxt}
               className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-96 2xl:text-6xl"
             >
-              I dont fancy myself a top artist but I do think I make some cool
-              digital art... <span className="text-[#ED9022]">sometimes</span>{" "}
+              I dont fancy myself a top artist but I do think I make some{" "}
+              <span className="text-[#ED9022]">
+                cool digital art sometimes...
+              </span>{" "}
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-20 mx-4 lg:mx-10 xl:mx-20 2xl:gap-x-20">
-            {/* <Card
-              title={"Real Estate"}
-              description={"Development"}
-              image={"/images/jonna.jpg"}
-            />
-            <Card
-              title={"GameShop"}
-              description={"Development"}
-              image={"/images/shubam.jpg"}
-            />
-            <Card
-              title={"Beyond October"}
-              description={"Brand Design"}
-              image={"/images/max.jpg"}
-            /> */}
             {art &&
               art.map((piece) => (
                 <Card

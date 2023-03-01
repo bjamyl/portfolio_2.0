@@ -13,7 +13,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Real Estae",
+    title: "Real Estate",
     description: "Development",
     image: "/images/real_estate.png",
   },
