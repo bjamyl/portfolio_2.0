@@ -38,21 +38,6 @@ export default function Works() {
         </h1>
       </div>
       <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-32 mx-4 lg:mx-10 xl:mx-20 2xl:gap-x-20">
-        {/* <Card
-          title={"Real Estate"}
-          description={"Development"}
-          image={"/images/jonna.jpg"}
-        />
-        <Card
-          title={"GameShop"}
-          description={"Development"}
-          image={"/images/shubam.jpg"}
-        />
-        <Card
-          title={"Beyond October"}
-          description={"Brand Design"}
-          image={"/images/max.jpg"}
-        /> */}
         {projects &&
           projects.map((project) => (
             <Card
