@@ -1,4 +1,4 @@
-import { Navbar, Hero, About, Works, Layout, Extras } from "../components";
+import { Works, Hero, About, Layout, Extras } from "../components";
 import { useEffect } from "react";
 import { isFirefox, } from "react-device-detect";
 import Lenis from "@studio-freight/lenis";
@@ -37,7 +37,6 @@ export default function Home() {
 
   return (
     <Layout>
-      <Navbar />
       <Hero />
       <About />
       <Works />

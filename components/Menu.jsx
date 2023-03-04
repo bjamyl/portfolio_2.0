@@ -14,6 +14,8 @@ export default function Menu({ toggle }) {
   const twitter = useRef();
   const dribble = useRef();
   const menuAnim = useRef();
+  const bg = useRef()
+  const container = useRef()
 
   //Initializing animation
   useEffect(() => {
@@ -22,6 +24,8 @@ export default function Menu({ toggle }) {
     });
     menuAnim.current = gsap
       .timeline()
+      .from(bg.current, {autoAlpha:0, opacity:1, duration:0.06})
+      .from(container.current, {autoAlpha:0, opacity:1, duration:0.06},'-=0.05')
       .from(topHalf.current, { autoAlpha: 0, x: -700, duration: 0.2 })
       .from(bottomHalf.current, { autoAlpha: 0, x: 700, duration: 0.2 })
       .from(home.current, { autoAlpha: 0, x: -50, duration: 0.2 })
@@ -38,8 +42,8 @@ export default function Menu({ toggle }) {
   }, [toggle]);
 
   return (
-    <section className="h-screen w-screen fixed inset-0">
-      <div className="relative w-full h-full">
+    <section ref={container} className="h-screen w-screen fixed top-0">
+      <div ref={bg} className="invisible relative w-full h-full">
         <div
           ref={topHalf}
           id="upper"
@@ -50,7 +54,7 @@ export default function Menu({ toggle }) {
           id="lower"
           className="invisible bottom-0 h-1/2 bg-[#1C1D1F]"
         ></div>
-        <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20">
+        {/* <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20">
           <div className="h-2/4 flex flex-col justify-between">
             <ul className="text-slate-50  font-bold text-4xl space-y-6">
               <li
@@ -89,25 +93,25 @@ export default function Menu({ toggle }) {
             <ul className="flex gap-4">
               <li
                 ref={linkedin}
-                className="font-bold font-sans invisible  text-slate-50 underline"
+                className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
               >
                 LINKEDIN
               </li>
               <li
                 ref={twitter}
-                className="font-bold font-sans invisible  text-slate-50 underline"
+                className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
               >
                 TWITTER
               </li>
               <li
                 ref={dribble}
-                className="font-bold font-sans invisible  text-slate-50 underline"
+                className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
               >
                 DRIBBLE
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
