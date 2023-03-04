@@ -1,11 +1,11 @@
-import React from 'react'
-import { Layout } from '../components'
+import React from "react";
+import { Layout } from "../components";
 
 export default function Se() {
   return (
-    <Layout>
-
-        <div className='hover:cursor-pointer'>Se</div>
-    </Layout>
-  )
+    <>
+      <main class="container">Can you see the noise? 😅</main>
+      <div class="noise"></div>
+    </>
+  );
 }

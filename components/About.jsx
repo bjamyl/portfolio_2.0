@@ -29,7 +29,7 @@ export default function About() {
   }, []);
 
   return (
-    <main className="my-20 flex flex-col gap-12 justify-center">
+    <main className="noise my-20 flex flex-col gap-12 justify-center">
       <div className="flex flex-col justify-between">
         <div className="space-y-4">
           <div ref={trig} className="overflow-hidden h-fit">
