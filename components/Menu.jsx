@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap/dist/gsap";
+import { useRouter } from "next/router";
 
 export default function Menu({ toggle }) {
   // Declaring the refs for the items to be animated
@@ -14,8 +15,8 @@ export default function Menu({ toggle }) {
   const twitter = useRef();
   const dribble = useRef();
   const menuAnim = useRef();
-  const bg = useRef()
-  const container = useRef()
+  const bg = useRef();
+  const container = useRef();
 
   //Initializing animation
   useEffect(() => {
@@ -24,8 +25,12 @@ export default function Menu({ toggle }) {
     });
     menuAnim.current = gsap
       .timeline()
-      .from(bg.current, {autoAlpha:0, opacity:1, duration:0.06})
-      .from(container.current, {autoAlpha:0, opacity:1, duration:0.06},'-=0.05')
+      .from(bg.current, { autoAlpha: 0, opacity: 1, duration: 0.06 })
+      .from(
+        container.current,
+        { autoAlpha: 0, opacity: 1, duration: 0.06 },
+        "-=0.05"
+      )
       .from(topHalf.current, { autoAlpha: 0, x: -700, duration: 0.2 })
       .from(bottomHalf.current, { autoAlpha: 0, x: 700, duration: 0.2 })
       .from(home.current, { autoAlpha: 0, x: -50, duration: 0.2 })
@@ -40,6 +45,61 @@ export default function Menu({ toggle }) {
   useEffect(() => {
     toggle ? menuAnim.current.play() : menuAnim.current.reverse();
   }, [toggle]);
+
+  //Getting the router path
+  const router = useRouter();
+  router;
+
+  const links = [
+    {
+      id: 1,
+      linkName: "LINKEDIN",
+      address: "https://www.linkedin.com/in/jamil-banamwine-alhassan/",
+      ref: linkedin,
+    },
+    {
+      id: 2,
+      linkName: "TWITTER",
+      address: "https://twitter.com/MhylJay",
+      ref: twitter,
+    },
+    {
+      id: 3,
+      linkName: "GITHUB",
+      address: "https://github.com/bjamyl",
+      ref: dribble,
+    },
+  ];
+  const menuData = [
+    {
+      id: 1,
+      linkName: "HOME",
+      num: "01",
+      address: "/",
+      ref: home,
+    },
+    {
+      id: 2,
+      linkName: "WORK",
+      num: "02",
+      address: "/work",
+      ref: work,
+    },
+    {
+      id: 3,
+      linkName: "ABOUT",
+      num: "03",
+      address: "/about",
+      ref: about,
+    },
+    {
+      id: 3,
+      linkName: "CONTACT",
+      num: "04",
+      address: "",
+      ref: contact,
+    },
+  ];
 
   return (
     <section ref={container} className="h-screen w-screen fixed top-0">
@@ -57,58 +117,33 @@ export default function Menu({ toggle }) {
         <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20">
           <div className="h-2/4 flex flex-col justify-between">
             <ul className="text-slate-50  font-bold text-4xl space-y-6">
-              <li
-                className="hover:cursor-pointer font-sans hover:translate-y-5 invisible overflow-hidden xl:text-7xl"
-                ref={home}
-              >
-                <Link href="/">
-                  <span className="text-sm xl:text-3xl">01</span>HOME
-                </Link>
-              </li>
-              <li
-                className="hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl"
-                ref={work}
-              >
-                <Link href="/work">
-                  <span className="text-sm xl:text-3xl">02</span>WORK
-                </Link>
-              </li>
-              <li
-                className="hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl"
-                ref={about}
-              >
-                <Link href="/about">
-                  <span className="text-sm xl:text-3xl">03</span>ABOUT{" "}
-                </Link>
-              </li>
-              <li
-                className="hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl"
-                ref={contact}
-              >
-                <Link href="/contact">
-                  <span className="text-sm xl:text-3xl">04</span>CONTACT
-                </Link>
-              </li>
+              {menuData.map((menuItem) => (
+                <li
+                  className={`hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl ${
+                    router.pathname === menuItem.address ? "text-[#ed9022]" : ""
+                  }`}
+                  key={menuItem.id}
+                  ref={menuItem.ref}
+                >
+                  <Link href={menuItem.address}>
+                    <span className="text-sm xl:text-3xl">{menuItem.num}</span>
+                    {menuItem.linkName}
+                  </Link>
+                </li>
+              ))}
             </ul>
             <ul className="flex gap-4">
-              <li
-                ref={linkedin}
-                className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
-              >
-                LINKEDIN
-              </li>
-              <li
-                ref={twitter}
-                className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
-              >
-                TWITTER
-              </li>
-              <li
-                ref={dribble}
-                className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
-              >
-                DRIBBLE
-              </li>
+              {links.map((link) => (
+                <li
+                  key={link.id}
+                  className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
+                  ref={link.ref}
+                >
+                  <a href={link.address} target="_blank" rel="noreferrer">
+                    {link.linkName}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

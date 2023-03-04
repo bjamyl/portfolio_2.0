@@ -12,7 +12,6 @@ export default function Layout({ children, title, description, keywords }) {
         <meta name="keywords" content={keywords} />
       </Head>
       <Navbar />
-      <div className="noise"></div>
       {children}
       <Footer />
     </div>
