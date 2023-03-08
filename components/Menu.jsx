@@ -1,9 +1,10 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap/dist/gsap";
 import { useRouter } from "next/router";
 
-export default function Menu({ toggle }) {
+export default function Menu({ toggle, setToggle }) {
   // Declaring the refs for the items to be animated
   const topHalf = useRef();
   const bottomHalf = useRef();
@@ -102,52 +103,57 @@ export default function Menu({ toggle }) {
   ];
 
   return (
-    <section ref={container} className="h-screen w-screen fixed top-0">
-      <div ref={bg} className="invisible relative w-full h-full">
-        <div
-          ref={topHalf}
-          id="upper"
-          className="invisible top-0  h-1/2 bg-[#1C1D1F]"
-        ></div>
-        <div
-          ref={bottomHalf}
-          id="lower"
-          className="invisible bottom-0 h-1/2 bg-[#1C1D1F]"
-        ></div>
-        <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20">
-          <div className="h-2/4 flex flex-col justify-between">
-            <ul className="text-slate-50  font-bold text-4xl space-y-6">
-              {menuData.map((menuItem) => (
-                <li
-                  className={`hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl ${
-                    router.pathname === menuItem.address ? "text-[#ed9022]" : ""
-                  }`}
-                  key={menuItem.id}
-                  ref={menuItem.ref}
-                >
-                  <Link href={menuItem.address}>
-                    <span className="text-sm xl:text-3xl">{menuItem.num}</span>
-                    {menuItem.linkName}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <ul className="flex gap-4">
-              {links.map((link) => (
-                <li
-                  key={link.id}
-                  className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
-                  ref={link.ref}
-                >
-                  <a href={link.address} target="_blank" rel="noreferrer">
-                    {link.linkName}
-                  </a>
-                </li>
-              ))}
-            </ul>
+      <section ref={container} className="h-screen w-screen fixed top-0">
+        <div ref={bg} className="invisible relative w-full h-full">
+          <div
+            ref={topHalf}
+            id="upper"
+            className="invisible top-0  h-1/2 bg-[#1C1D1F]"
+          ></div>
+          <div
+            ref={bottomHalf}
+            id="lower"
+            className="invisible bottom-0 h-1/2 bg-[#1C1D1F]"
+          ></div>
+          <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20">
+            <div className="h-2/4 flex flex-col justify-between">
+              <ul className="text-slate-50  font-bold text-4xl space-y-6">
+                {menuData.map((menuItem) => (
+                  <li
+                    onClick={() => setToggle(false)}
+                    className={`hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl ${
+                      router.pathname === menuItem.address
+                        ? "text-[#ed9022]"
+                        : ""
+                    }`}
+                    key={menuItem.id}
+                    ref={menuItem.ref}
+                  >
+                    <Link href={menuItem.address}>
+                      <span className="text-sm xl:text-3xl">
+                        {menuItem.num}
+                      </span>
+                      {menuItem.linkName}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="flex gap-4">
+                {links.map((link) => (
+                  <li
+                    key={link.id}
+                    className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
+                    ref={link.ref}
+                  >
+                    <a href={link.address} target="_blank" rel="noreferrer">
+                      {link.linkName}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }

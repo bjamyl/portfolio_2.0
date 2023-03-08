@@ -1,15 +1,21 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap, { Power4 } from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { FiArrowUpRight } from "react-icons/fi";
 import Card from "./Card";
 import projects from "./data";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Works() {
+  const [hover, setHover] = useState(false);
   const text = useRef();
 
   const tl = useRef();
   const trigger = useRef();
+  const underline = useRef();
+
+  //Hover animation timeline
+  const hoverAnim = useRef();
 
   useEffect(() => {
     tl.current = gsap
@@ -27,12 +33,26 @@ export default function Works() {
       });
   }, []);
 
+  useEffect(() => {
+    hoverAnim.current = gsap.timeline({
+      paused: true,
+    });
+
+    hoverAnim.current = gsap
+      .timeline()
+      .to(underline.current, { width: "70%", duration: 0.5 });
+  }, []);
+
+  useEffect(() => {
+    hover ? hoverAnim.current.play() : hoverAnim.current.reverse();
+  }, [hover]);
+
   return (
     <section ref={trigger}>
       <div className="h-fit overflow-hidden mb-10">
         <h1
           ref={text}
-          className="mx-4 font-bold text-7xl text-right md:text-8xl lg:mx-10 xl:mx-20 text-slate-50 font-sans"
+          className="mx-4 font-bold text-4xl lg:text-7xl text-right md:text-8xl lg:mx-10 xl:mx-20 text-slate-50 font-sans"
         >
           WORKS
         </h1>
@@ -47,6 +67,18 @@ export default function Works() {
               image={project.image}
             />
           ))}
+      </div>
+      <div className="mt-10 font-sans text-slate-50 flex justify-center text-2xl xl:mt-16 xl:text-3xl hover:cursor-pointer">
+        <div onMouseEnter={() => setHover(true)} onMouseLeave={()=>setHover(false)} className="flex flex-col">
+          <h3 className="flex">
+            All Projects <FiArrowUpRight />
+          </h3>
+          <div
+            
+            ref={underline}
+            className="w-[0px] h-[1px] bg-slate-50"
+          ></div>
+        </div>
       </div>
     </section>
   );

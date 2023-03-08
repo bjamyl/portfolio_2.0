@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { gsap } from "gsap";
+import { AnimatePresence, motion } from "framer-motion";
 import { CSSPlugin } from "gsap/CSSPlugin";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -19,33 +20,11 @@ const inter = Poppins({
 });
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    router.events.on("routeChangeStart", () => {
-      setLoading(true);
-    });
-
-    router.events.on("routeChangeComplete", () => {
-      setLoading(false);
-    });
-
-    router.events.on("routeChangeError", () => {
-      setLoading(false);
-    });
-  }, [router]);
-
   return (
-    <>
-      {!loading ? (
-        <main className={`${syne.variable}  ${inter.variable}`}>
-          <Component {...pageProps} />
-        </main>
-      ) : (
-        <LoadingScreen />
-      )}
-    </>
+    <main className={`${syne.variable}  ${inter.variable}`}>
+      <Component {...pageProps} />
+    </main>
   );
 }
 

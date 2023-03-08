@@ -3,19 +3,51 @@ import gsap from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Power4 } from "gsap/dist/gsap";
+import CustomLink from "./CustomLink";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
   const headerTxt = useRef();
   const trigger = useRef();
-  const primTxt = useRef()
-  const btn = useRef()
-  const linkedin = useRef()
-  const twitter = useRef()
-  const email = useRef()
-  const github = useRef()
+  const primTxt = useRef();
+  const btn = useRef();
+  const linkedin = useRef();
+  const twitter = useRef();
+  const email = useRef();
+  const github = useRef();
   const tl = useRef();
+
+  // Footer Links
+  const links1 = [
+    {
+      id: 1,
+      linkName: "LINKEDIN",
+      address: "https://www.linkedin.com/in/jamil-banamwine-alhassan/",
+      ref: linkedin,
+    },
+    {
+      id: 2,
+      linkName: "GITHUB",
+      address: "https://github.com/bjamyl",
+      ref: github,
+    },
+  ];
+
+  const links2 = [
+    {
+      id: 1,
+      linkName: "TWITTER",
+      address: "https://twitter.com/MhylJay",
+      ref: twitter,
+    },
+    {
+      id: 2,
+      linkName: "EMAIL",
+      address: "mailto:alhassanjamil0@gmail.com",
+      ref: email,
+    },
+  ];
 
   useEffect(() => {
     tl.current = gsap
@@ -23,18 +55,49 @@ export default function Footer() {
         scrollTrigger: {
           trigger: trigger.current,
           start: "start 50%",
-          end: 'bottom 35%',
-          scrub:true,
+          end: "bottom 35%",
+          scrub: true,
         },
       })
-      .from(headerTxt.current, { autoAlpha: 0, y: 50, duration: 0.7, ease: Power4.easeOut })
-      .from(primTxt.current, {autoAlpha:0, opacity:1, duration:0.5, ease:Power4.easeOut},"-=0.25")
-      .from(btn.current, {autoAlpha:0, y:-50, duration:0.7, delay:0.5, ease:Power4.easeOut})
-      .from(linkedin.current, {autoAlpha:0, x:-60, duration:0.7, ease:Power4.easeOut})
-      .from(github.current, {autoAlpha:0, x:60, duration:0.7, ease:Power4.easeOut},"-=0.5")
-      .from(twitter.current, {autoAlpha:0, x:-60, duration:0.7, ease:Power4.easeOut},"-=0.5")
-      .from(email.current, {autoAlpha:0, x:60, duration:0.7, ease:Power4.easeOut},"-=0.5")
-
+      .from(headerTxt.current, {
+        autoAlpha: 0,
+        y: 50,
+        duration: 0.7,
+        ease: Power4.easeOut,
+      })
+      .from(
+        primTxt.current,
+        { autoAlpha: 0, opacity: 1, duration: 0.5, ease: Power4.easeOut },
+        "-=0.25"
+      )
+      .from(btn.current, {
+        autoAlpha: 0,
+        y: -50,
+        duration: 0.7,
+        delay: 0.5,
+        ease: Power4.easeOut,
+      })
+      .from(linkedin.current, {
+        autoAlpha: 0,
+        x: -60,
+        duration: 0.7,
+        ease: Power4.easeOut,
+      })
+      .from(
+        github.current,
+        { autoAlpha: 0, x: 60, duration: 0.7, ease: Power4.easeOut },
+        "-=0.5"
+      )
+      .from(
+        twitter.current,
+        { autoAlpha: 0, x: -60, duration: 0.7, ease: Power4.easeOut },
+        "-=0.5"
+      )
+      .from(
+        email.current,
+        { autoAlpha: 0, x: 60, duration: 0.7, ease: Power4.easeOut },
+        "-=0.5"
+      );
   }, []);
 
   return (
@@ -54,36 +117,59 @@ export default function Footer() {
             </h1>
           </div>
           <div className="flex  justify-center">
-            <p ref={primTxt} className="invisible font-body md:w-[60%] text-center mt-5 xl:text-xl xl:w-[40%]">
+            <p
+              ref={primTxt}
+              className="invisible font-body md:w-[60%] text-center mt-5 xl:text-xl xl:w-[40%]"
+            >
               I am currently looking for a remote fulltime, part-time or
-              contract work. Don&apos;t hesitate to reach out, I will get back to you
-              within the shortest possible time.{" "}
+              contract work. Don&apos;t hesitate to reach out, I will get back
+              to you within the shortest possible time.{" "}
             </p>
           </div>
           <div className="flex items-center justify-center font-sans mt-10">
-            <button ref={btn} id="hello-btn" className="flex items-baseline border-b-2 hover:cursor-pointer text-2xl">
-              SAY HELLO
-              <p>
-                <FiArrowUpRight />
-              </p>{" "}
-            </button>
+            <a href="mailto:alhassanjamil0@gmail.com">
+              <button
+                ref={btn}
+                id="hello-btn"
+                className="flex items-baseline hover:cursor-pointer text-2xl"
+              >
+                <CustomLink liName={"SAY HELLO"}/>
+              </button>
+            </a>
           </div>
         </div>
         <div className="mt-10">
           <div className="flex items-center justify-around h-fit overflow-hidden">
-            <a href="https://www.linkedin.com/in/jamil-banamwine-alhassan/" target='_blank' rel='noreferrer'>
-            <h3 ref={linkedin} className="invisible font-sans text-2xl border-b-2 hover:cursor-pointer hover:border-b-[#ed9022] hover:text-[#ed9022]">LINKEDIN</h3>
+            {links1.map((link) => (
+              <a key={link.id} href={link.address}>
+                <h3 ref={link.ref} className="invisible">
+                  <CustomLink liName={link.linkName} customCSS={'text-2xl'}/>
+                </h3>
+              </a>
+            ))}
+
+            {/* <a href="https://www.linkedin.com/in/jamil-banamwine-alhassan/" target='_blank' rel='noreferrer'>
+              <h3 ref={linkedin} className="invisible font-sans text-2xl border-b-2 hover:cursor-pointer hover:border-b-[#ed9022] hover:text-[#ed9022]">LINKEDIN</h3>
             </a>
-            <h3 ref={github} className="invisible font-sans text-2xl border-b-2 hover:cursor-pointer hover:border-b-[#ed9022] hover:text-[#ed9022]">GITHUB</h3>
+            <a href="https://www.github.com/bjamyl">
+              <h3 ref={github} className="invisible font-sans text-2xl border-b-2 hover:cursor-pointer hover:border-b-[#ed9022] hover:text-[#ed9022]">GITHUB</h3>
+            </a> */}
           </div>
           <div className="flex items-center justify-around h-fit overflow-hidden">
-            <h3 ref={twitter} className="invisible font-sans text-2xl  border-b-2 hover:cursor-pointer hover:border-b-[#ed9022] hover:text-[#ed9022]">TWITTER</h3>
-            <h3 ref={email} className="invisible font-sans text-2xl border-b-2 hover:cursor-pointer hover:border-b-[#ed9022] hover:text-[#ed9022]">EMAIL</h3>
+          {links2.map((link) => (
+              <a key={link.id} href={link.address}>
+                <h3 ref={link.ref} className="invisible">
+                  <CustomLink liName={link.linkName} customCSS={'text-2xl'}/>
+                </h3>
+              </a>
+            ))}
+
+
           </div>
         </div>
       </section>
       <p className="font-body text-slate-50 text-center">
-        Designed and Built by Jamil
+        &copy; {new Date().getFullYear()} Jamil Alhassan
       </p>
     </footer>
   );

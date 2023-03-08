@@ -4,14 +4,11 @@ import Link from "next/link";
 import Menu from "./Menu";
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
-  function showNull() {
-    return null;
-  }
-
+  
   return (
     <nav className="fixed top-0 w-screen  z-10">
       {/* {toggle ? <Menu toggle={toggle} /> : null} */}
-      <Menu toggle={toggle} />
+      <Menu toggle={toggle} setToggle={setToggle} />
       <div className="m-4 lg:mx-10 xl:my-10 xl:mx-20 flex items-center justify-between">
         <h2 className="text-slate-50 font-sans text-lg font-bold xl:text-xl z-50  hover:cursor-pointer">
           <Link href="/">

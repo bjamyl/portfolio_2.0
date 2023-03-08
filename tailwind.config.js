@@ -13,6 +13,8 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-syne)"],
         body: ["var(--font-inter)"],
+        gilroyLight: "Gilroy-Light",
+        gilroyBold: "Gilroy-ExtraBold",
       },
     },
   },
