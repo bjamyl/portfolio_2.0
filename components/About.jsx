@@ -49,7 +49,7 @@ export default function About() {
           </div>
           <p
             ref={bodyText1}
-            className="text-base invisible leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 font-body  text-slate-50 2xl:mx-96 2xl:text-xl"
+            className="text-base invisible leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20   text-slate-50 2xl:mx-96 2xl:text-xl"
           >
             I am a creative developer who relishes the challenge of turning
             ideas in unforgettable digital experiences. I have worked as an
