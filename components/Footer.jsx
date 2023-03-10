@@ -147,13 +147,6 @@ export default function Footer() {
                 </h3>
               </a>
             ))}
-
-            {/* <a href="https://www.linkedin.com/in/jamil-banamwine-alhassan/" target='_blank' rel='noreferrer'>
-              <h3 ref={linkedin} className="invisible font-sans text-2xl border-b-2 hover:cursor-pointer hover:border-b-[#ed9022] hover:text-[#ed9022]">LINKEDIN</h3>
-            </a>
-            <a href="https://www.github.com/bjamyl">
-              <h3 ref={github} className="invisible font-sans text-2xl border-b-2 hover:cursor-pointer hover:border-b-[#ed9022] hover:text-[#ed9022]">GITHUB</h3>
-            </a> */}
           </div>
           <div className="flex items-center justify-around h-fit overflow-hidden">
           {links2.map((link) => (
@@ -168,8 +161,8 @@ export default function Footer() {
           </div>
         </div>
       </section>
-      <p className="font-body text-slate-50 text-center">
-        &copy; {new Date().getFullYear()} Jamil Alhassan
+      <p className="font-body text-slate-50 text-center border-t-[0.5px] border-slate-300 mx-4 xl:mx-14 pt-5">
+        &copy; {new Date().getFullYear()} All Rights Reserved. Designed & Coded by Jamil Alhassan
       </p>
     </footer>
   );

@@ -45,3 +45,7 @@ body {
   font-family: "Gilroy-ExtraBold";
   src: url("/fonts/Gilroy-ExtraBold.otf");
 }
+
+.image-main {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}

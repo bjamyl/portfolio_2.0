@@ -44,6 +44,7 @@ export default function Extras() {
                   title={piece.title}
                   description={piece.description}
                   image={piece.image}
+                  image2={piece.image2}
                 />
               ))}
           </div>

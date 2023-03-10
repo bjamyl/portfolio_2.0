@@ -4,6 +4,7 @@ const extras = [
     title: "Nefertiti",
     description: "Illustration",
     image: "/images/art/nefertiti.jpg",
+    image2: "/images/art/monalisa.jpg",
   },
   {
     id: 2,

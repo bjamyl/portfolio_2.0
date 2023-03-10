@@ -65,6 +65,7 @@ export default function Works() {
               title={project.title}
               description={project.description}
               image={project.image}
+              image2={project.image2}
             />
           ))}
       </div>
