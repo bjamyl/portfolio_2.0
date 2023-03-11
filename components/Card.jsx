@@ -69,7 +69,7 @@ export default function Card({ title, description, image, image2 }) {
             data-scroll
             data-scroll-repeat="false"
             data-scroll-class="slide"
-            className="h-full w-full absolute top-0 left-0 bg-[#1C1D1F] z-50"
+            className="h-full w-full absolute top-0 left-0 bg-[#1C1D1F] z-40"
           ></div>
           <Image
             ref={photo}
@@ -77,7 +77,7 @@ export default function Card({ title, description, image, image2 }) {
             alt="image"
             fill
             style={{ objectFit: "cover" }}
-            className="image-main  absolute top-0 left-0 object-fill z-40"
+            className="image-main  absolute top-0 left-0 object-fill z-30"
           />
           <Image
             ref={photo2}

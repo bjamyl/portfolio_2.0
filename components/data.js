@@ -10,8 +10,8 @@ const projects = [
     id: 2,
     title: "Beyond October",
     description: "Brand Design",
-    image: "/images/beyond.png",
-    image2: "/images/gameshop.png",
+    image: "/images/by02.png",
+    image2: "/images/beyond.png",
   },
   {
     id: 3,

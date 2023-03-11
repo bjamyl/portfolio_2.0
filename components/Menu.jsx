@@ -103,12 +103,12 @@ export default function Menu({ toggle, setToggle }) {
   ];
 
   return (
-      <section ref={container} className="h-screen w-screen fixed top-0">
+      <section ref={container} className="h-screen w-screen fixed top-0 z-50 ">
         <div ref={bg} className="invisible relative w-full h-full">
           <div
             ref={topHalf}
             id="upper"
-            className="invisible top-0  h-1/2 bg-[#1C1D1F]"
+            className="invisible top-0  h-1/2 bg-[#1C1D1F] z-40"
           ></div>
           <div
             ref={bottomHalf}

@@ -1,11 +1,11 @@
 import "../styles/globals.css";
+import TransitionLayout from "../components/TransitionLayout";
+import { TransitionProvider } from "../context/TransitionContext";
 import { gsap } from "gsap";
-import { AnimatePresence, motion } from "framer-motion";
 import { CSSPlugin } from "gsap/CSSPlugin";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { LoadingScreen } from "../components";
-import { Syne, MuseoModerno, Poppins } from "@next/font/google";
+import { Syne, Poppins } from "@next/font/google";
 gsap.registerPlugin(CSSPlugin);
 
 const syne = Syne({
@@ -22,9 +22,13 @@ const inter = Poppins({
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <main className={`${syne.variable}  ${inter.variable}`}>
-      <Component {...pageProps} />
-    </main>
+    <TransitionProvider>
+      <TransitionLayout>
+        <main className={`${syne.variable}  ${inter.variable}`}>
+          <Component {...pageProps} />
+        </main>
+      </TransitionLayout>
+    </TransitionProvider>
   );
 }
 
