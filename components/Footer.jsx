@@ -111,7 +111,7 @@ export default function Footer() {
           >
             <h1
               ref={headerTxt}
-              className="invisible font-sans text-center text-5xl md:text-8xl font-bold"
+              className="invisible font-sans text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold"
             >
               LET&apos;S WORK <br /> TOGETHER
             </h1>
@@ -119,7 +119,7 @@ export default function Footer() {
           <div className="flex  justify-center">
             <p
               ref={primTxt}
-              className="invisible font-body md:w-[60%] text-center mt-5 xl:text-xl xl:w-[40%]"
+              className="invisible font-body w-[85%] md:w-[60%] text-center mt-5 xl:text-xl xl:w-[40%]"
             >
               I am currently looking for a remote fulltime, part-time or
               contract work. Don&apos;t hesitate to reach out, I will get back
@@ -131,7 +131,7 @@ export default function Footer() {
               <button
                 ref={btn}
                 id="hello-btn"
-                className="flex items-baseline hover:cursor-pointer text-2xl"
+                className="flex items-baseline hover:cursor-pointer text-xl md:text-2xl"
               >
                 <CustomLink liName={"SAY HELLO"}/>
               </button>
@@ -143,7 +143,7 @@ export default function Footer() {
             {links1.map((link) => (
               <a key={link.id} href={link.address}>
                 <h3 ref={link.ref} className="invisible">
-                  <CustomLink liName={link.linkName} customCSS={'text-2xl'}/>
+                  <CustomLink liName={link.linkName} customCSS={'text-xl md:text-2xl'}/>
                 </h3>
               </a>
             ))}
@@ -152,7 +152,7 @@ export default function Footer() {
           {links2.map((link) => (
               <a key={link.id} href={link.address}>
                 <h3 ref={link.ref} className="invisible">
-                  <CustomLink liName={link.linkName} customCSS={'text-2xl'}/>
+                  <CustomLink liName={link.linkName} customCSS={'text-xl md:text-2xl'}/>
                 </h3>
               </a>
             ))}

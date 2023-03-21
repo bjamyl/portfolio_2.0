@@ -94,7 +94,7 @@ export default function Card({ title, description, image, image2 }) {
         <div className="overflow-hidden h-fit">
           <h3
             ref={headTxt}
-            className="invisible font-sans text-slate-50 text-2xl"
+            className="invisible font-sans text-slate-50 text-xl md:text-2xl"
           >
             {title}
           </h3>

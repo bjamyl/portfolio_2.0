@@ -15,6 +15,7 @@ module.exports = {
         body: ["var(--font-inter)"],
         gilroyLight: "Gilroy-Light",
         gilroyBold: "Gilroy-ExtraBold",
+        rische: "rische",
       },
     },
   },

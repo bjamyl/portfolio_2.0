@@ -39,12 +39,12 @@ export default function Hero() {
             ref={ref}
             className=" h-[60%] w-full flex flex-col justify-between "
           >
-            <h2 ref={headerText} className="font-sans invisible mx-4 lg:mx-10 xl:mx-20 text-4xl md:text-6xl lg:text-7xl 2xl:text-9xl font-bold text-slate-50">
+            <h2 ref={headerText} className="font-sans invisible mx-4 md:mx-8 lg:mx-10 xl:mx-20 text-4xl md:text-6xl lg:text-7xl 2xl:text-9xl font-bold text-slate-50">
               SOFTWARE DEVELOPER
             </h2>
             <div> 
               <div></div>
-            <p ref={secText} className="invisible font-gilroyLight  mx-4 lg:mx-10 xl:mx-20 2xl:mx-20 text-slate-50 text-lg 2xl:text-2xl">
+            <p ref={secText} className="invisible font-gilroyLight  mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-20 text-slate-50 text-lg 2xl:text-2xl">
               Hello, Jamil here<span className="text-[#EC9021]">.</span> <br />I
               am a freelance fullstack developer based in in Ghana.
             </p>

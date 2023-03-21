@@ -46,6 +46,11 @@ body {
   src: url("/fonts/Gilroy-ExtraBold.otf");
 }
 
+@font-face {
+  font-family: 'rische';
+  src: url("/fonts/rische.otf");
+}
+
 .image-main {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }

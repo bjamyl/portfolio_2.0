@@ -36,7 +36,7 @@ export default function Extras() {
               </span>{" "}
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-20 mx-4 lg:mx-10 xl:mx-20 2xl:gap-x-20">
+          <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-20 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:gap-x-20">
             {art &&
               art.map((piece) => (
                 <Card
