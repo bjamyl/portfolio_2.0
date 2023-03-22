@@ -62,7 +62,7 @@ export default function Card({ title, description, image, image2 }) {
         <div
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className="hover:cursor-pointer w-full h-[250px] md:h-[450px] lg:h-[500px] overflow-hidden relative"
+          className="hover:cursor-pointer w-full h-[250px] md:h-[450px] lg:h-[500px] 2xl:h-[700px] overflow-hidden relative"
         >
           <div
             ref={slider}
@@ -90,7 +90,7 @@ export default function Card({ title, description, image, image2 }) {
         </div>
       </div>
       {/* text-section */}
-      <div className="flex justify-between items-baseline">
+      <div className="flex justify-between items-baseline mt-5">
         <div className="overflow-hidden h-fit">
           <h3
             ref={headTxt}
@@ -102,7 +102,7 @@ export default function Card({ title, description, image, image2 }) {
         <div className="overflow-hidden h-fit">
           <p
             ref={desTxt}
-            className="invisible mx-4 font-body text-slate-100 font-light text-lg"
+            className="invisible font-body text-slate-100 font-light text-lg"
           >
             {description}
           </p>

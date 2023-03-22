@@ -52,12 +52,12 @@ export default function Works() {
       <div className="h-fit overflow-hidden mb-10">
         <h1
           ref={text}
-          className="mx-4 md:mx-8 font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-right lg:mx-10 xl:mx-20 text-slate-50 font-sans"
+          className="mx-4 md:mx-8 font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-right lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50 font-sans"
         >
           WORKS
         </h1>
       </div>
-      <div className="grid grid-cols-1 gap-y-14 2xl:grid-cols-2 2xl:space-y-32 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:gap-x-20">
+      <div className="grid grid-cols-1 gap-y-14 2xl:grid-cols-2 2xl:space-y-32 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 2xl:gap-x-32">
         {projects &&
           projects.map((project) => (
             <Card

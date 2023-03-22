@@ -28,7 +28,7 @@ export default function Extras() {
           <div ref={trigger} className="overflow-hidden h-fit 2xl:mb-10">
             <h2
               ref={headerTxt}
-              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-96 2xl:text-6xl"
+              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-72 2xl:text-6xl"
             >
               I dont fancy myself a top artist but I do think I make some{" "}
               <span className="text-[#ED9022]">
@@ -36,7 +36,7 @@ export default function Extras() {
               </span>{" "}
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-20 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:gap-x-20">
+          <div className="grid grid-cols-1 gap-y-8 2xl:grid-cols-2 2xl:space-y-20 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 2xl:gap-x-32">
             {art &&
               art.map((piece) => (
                 <Card

@@ -113,13 +113,13 @@ export default function Footer() {
               ref={headerTxt}
               className="invisible font-sans text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold"
             >
-              LET&apos;S WORK <br /> TOGETHER
+              LET&apos;S BUILD <br /> SOMETHING GREAT
             </h1>
           </div>
           <div className="flex  justify-center">
             <p
               ref={primTxt}
-              className="invisible font-body w-[85%] md:w-[60%] text-center mt-5 xl:text-xl xl:w-[40%]"
+              className="invisible font-body w-[90%] md:w-[70%] text-center mt-5 xl:text-xl xl:w-[50%]"
             >
               I am currently looking for a remote fulltime, part-time or
               contract work. Don&apos;t hesitate to reach out, I will get back
@@ -161,7 +161,7 @@ export default function Footer() {
           </div>
         </div>
       </section>
-      <p className="font-body text-slate-50 text-center border-t-[0.5px] border-slate-300 mx-4 xl:mx-14 pt-5">
+      <p className="font-body text-slate-50 text-sm md:text-base text-center border-t-[0.5px] border-slate-300 mx-4 xl:mx-14 pt-5">
         &copy; {new Date().getFullYear()} All Rights Reserved. Designed & Coded by Jamil Alhassan
       </p>
     </footer>
