@@ -46,7 +46,7 @@ export default function Hero() {
               <div></div>
             <p ref={secText} className="invisible font-gilroyLight  mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50 text-lg 2xl:text-2xl">
               Hello, Jamil here<span className="text-[#EC9021]">.</span> <br />I
-              am a freelance fullstack developer based in in Ghana.
+              am a fullstack developer based in in Ghana.
             </p>
             </div>
           </div>

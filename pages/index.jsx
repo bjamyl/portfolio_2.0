@@ -1,4 +1,4 @@
-import { Works, Hero, About, Layout, Extras } from "../components";
+import { Works, Hero, About, Layout, Extras, Expertise } from "../components";
 import { useEffect } from "react";
 import { isFirefox, } from "react-device-detect";
 import Lenis from "@studio-freight/lenis";

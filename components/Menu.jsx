@@ -115,7 +115,7 @@ export default function Menu({ toggle, setToggle }) {
             id="lower"
             className="invisible bottom-0 h-1/2 bg-[#1C1D1F]"
           ></div>
-          <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20">
+          <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20 2xl:mx-64">
             <div className="h-2/4 flex flex-col justify-between">
               <ul className="text-slate-50  font-bold text-4xl space-y-6">
                 {menuData.map((menuItem) => (

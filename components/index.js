@@ -6,3 +6,4 @@ export { default as Layout } from "./Layout";
 export { default as LoadingScreen } from "./LoadingScreen";
 export { default as Extras } from "./Extras";
 export { default as CustomLink } from "./CustomLink";
+export { default as Expertise } from "./Expertise";

@@ -34,7 +34,6 @@ export default function Card({ title, description, image, image2 }) {
 
   //Hover animation timeline
   const hoverAnim = useRef();
-  console.log(hover ? "hovered" : "nothovered");
 
   useEffect(() => {
     hoverAnim.current = gsap.timeline({

@@ -7,6 +7,7 @@ export default function About() {
   const headerText1 = useRef();
   const headerText2 = useRef();
   const bodyText1 = useRef();
+  const cv = useRef()
   const trig = useRef();
   const tl = useRef();
 
@@ -26,12 +27,13 @@ export default function About() {
         "-=0.25"
       )
       .from(bodyText1.current, { autoAlpha: 0, opacity: 1 })
+      .from(cv.current, { autoAlpha: 0, opacity: 1 })
   }, []);
 
   return (
     <main className="my-20 flex flex-col gap-12 justify-center">
       <div className="flex flex-col justify-between">
-        <div className="space-y-4">
+        <div className="space-y-10">
           <div ref={trig} className="overflow-hidden h-fit">
             <h2
               ref={headerText1}
@@ -49,7 +51,7 @@ export default function About() {
           </div>
           <p
             ref={bodyText1}
-            className="text-base invisible leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl"
+            className="text-base invisible leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl pb-12"
           >
             I am a creative developer who relishes the challenge of turning
             ideas in unforgettable digital experiences. I have worked as an
@@ -62,7 +64,9 @@ export default function About() {
             those needs and design solutions that{" "}
             <span className="text-slate-400">scale</span> and{" "}
             <span className="text-slate-400">boost revenue</span>.
+
           </p>
+          <a ref={cv} className="text-[#ED9022] invisible mx-4 font-gilroyBold md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 2xl:text-xl" href="/Jamil_Banamwine_Alhassan_Resume.pdf " download>Download CV</a>
         </div>
       </div>
     </main>
