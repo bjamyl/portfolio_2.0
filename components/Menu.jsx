@@ -94,7 +94,7 @@ export default function Menu({ toggle, setToggle }) {
       ref: about,
     },
     {
-      id: 3,
+      id: 4,
       linkName: "CONTACT",
       num: "04",
       address: "",

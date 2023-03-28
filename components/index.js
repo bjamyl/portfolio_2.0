@@ -7,3 +7,4 @@ export { default as LoadingScreen } from "./LoadingScreen";
 export { default as Extras } from "./Extras";
 export { default as CustomLink } from "./CustomLink";
 export { default as Expertise } from "./Expertise";
+export { default as Card } from "./Card";

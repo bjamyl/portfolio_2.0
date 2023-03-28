@@ -33,7 +33,7 @@ export default function About() {
   return (
     <main className="my-20 flex flex-col gap-12 justify-center">
       <div className="flex flex-col justify-between">
-        <div className="space-y-10">
+        <div className="space-y-2">
           <div ref={trig} className="overflow-hidden h-fit">
             <h2
               ref={headerText1}
@@ -51,7 +51,7 @@ export default function About() {
           </div>
           <p
             ref={bodyText1}
-            className="text-base invisible leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl pb-12"
+            className="text-base invisible leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl xl:pb-12 pb-5"
           >
             I am a creative developer who relishes the challenge of turning
             ideas in unforgettable digital experiences. I have worked as an

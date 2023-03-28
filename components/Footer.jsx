@@ -113,7 +113,7 @@ export default function Footer() {
               ref={headerTxt}
               className="invisible font-sans text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold"
             >
-              LET&apos;S BUILD <br /> SOMETHING GREAT
+              LET&apos;S WORK <br /> TOGETHER
             </h1>
           </div>
           <div className="flex  justify-center">
