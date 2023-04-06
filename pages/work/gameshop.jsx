@@ -27,15 +27,14 @@ export default function Gameshop() {
   return (
     <Layout title={"Projects | GameShop"}>
       <section>
-        <Image
+        <img
           ref={photo}
           src="/images/gameshop-main.jpg"
           width={1920}
           height={1080}
           alt="real-estate"
-          className="h-screen object-cover md:object-center"
         />
-        <div className="h-fit overflow-hidden mt-10">
+        <div className="h-fit overflow-hidden mt-10 mb-2">
           <h1
             ref={title}
             className="invisible mx-4 md:mx-8 font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50 font-sans"
@@ -50,19 +49,17 @@ export default function Gameshop() {
           </h2>
           <div className="text-base leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl xl:pb-12 pb-5">
             <p>
-              Real Estate is a website for browsing and purchasing listed
-              properties. Users can create accounts and access a personalized
-              dashboard to track their property inquiries. User accounts are
-              authenticated with{" "}
+              GameShop is an e-commerce web app for searching and purchasing
+              everything related to gaming from gaming consoles to controllers
+              and even mouse pads.
               <span className="font-gilroyBold">JSON Web Tokens</span>.
             </p>
             <p className="mt-5">
-              I built this personal project to better solidify my understanding
-              of <span className="font-gilroyBold">Django REST Framework</span>{" "}
-              and{" "}
-              <span className="font-gilroyBold">
-                authentication and authorization with JSON Web Tokens
-              </span>
+              A very useful and sometimes overlooked structure in React for
+              passing data around is{" "}
+              <span className="font-gilroyBold">Context</span>. In this project,
+              I used Context primarily to handle the complex state management of
+              shopping carts all through to checkout.
             </p>
           </div>
         </div>
@@ -85,15 +82,22 @@ export default function Gameshop() {
             <ul className="font-gilroyLight text-slate-50 2xl:text-xl">
               <li>
                 <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
-                Designed the application using Figma and Photoshop
+                Designed the application using Figma, Illustrator and Photoshop.
               </li>
               <li>
                 <span className="text-[#EC9021] font-gilroyBold">-</span> Built
-                a REST API to serve data through endpoints to the frontend.{" "}
+                and deployed a REST API for serving products data to the front
+                end through various API endpoints{" "}
               </li>
               <li>
                 <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
-                Implemented authentication using JWT authentication.{" "}
+                Developed a responsive front-end application using NextJS;
+                translating the design into pixel-perfect code.{" "}
+              </li>
+              <li>
+                <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
+                Implemented multiple payment gateways with support for mobile
+                money using Stripe and Paystack
               </li>
             </ul>
           </div>
@@ -105,10 +109,13 @@ export default function Gameshop() {
             <ul className="font-gilroyLight text-slate-50 2xl:text-xl">
               <li>Figma</li>
               <li>Photoshop</li>
+              <li>Illustrator</li>
               <li>NextJS</li>
               <li>Django REST Framework</li>
               <li>Tailwind CSS</li>
               <li>PostgreSQL</li>
+              <li>Paystack</li>
+              <li>Stripe</li>
             </ul>
           </div>
         </div>
