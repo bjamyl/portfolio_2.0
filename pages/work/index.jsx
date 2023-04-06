@@ -2,6 +2,7 @@ import React from "react";
 import { Layout, Card } from "../../components";
 import projects from "../../components/data";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Works() {
   const [toggle, setToggle] = useState(1);
@@ -23,17 +24,18 @@ export default function Works() {
   };
 
   const displayContent = () => {
-    if(toggle === 1){
+    if (toggle === 1) {
       return projects.map((project) => (
-        <Card
-          key={project.id}
-          title={project.title}
-          description={project.description}
-          image={project.image}
-          image2={project.image2}
-        />
-      ))
-    } else if(toggle === 2){
+        <Link key={project.id} href={project.link}>
+          <Card
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            image2={project.image2}
+          />
+        </Link>
+      ));
+    } else if (toggle === 2) {
       return dev_projects.map((project) => (
         <Card
           key={project.id}
@@ -42,7 +44,7 @@ export default function Works() {
           image={project.image}
           image2={project.image2}
         />
-      ))
+      ));
     } else {
       return brand_projects.map((project) => (
         <Card
@@ -52,9 +54,9 @@ export default function Works() {
           image={project.image}
           image2={project.image2}
         />
-      ))
+      ));
     }
-  }
+  };
   return (
     <Layout>
       <div className="pt-20">
@@ -66,19 +68,25 @@ export default function Works() {
         <ul className="font-gilroyLight xl:text-2xl text-slate-50 flex gap-4 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 mt-5">
           <li
             onClick={() => toggleTab(1)}
-            className={`${toggle === 1 ? "text-[#ed9022]" : null} hover:cursor-pointer`}
+            className={`${
+              toggle === 1 ? "text-[#ed9022] font-gilroyBold" : null
+            } hover:cursor-pointer`}
           >
             All
           </li>
           <li
             onClick={() => toggleTab(2)}
-            className={`${toggle === 2 ? "text-[#ed9022]" : null} hover:cursor-pointer`}
+            className={`${
+              toggle === 2 ? "text-[#ed9022] font-gilroyBold" : null
+            } hover:cursor-pointer`}
           >
             Development
           </li>
           <li
             onClick={() => toggleTab(3)}
-            className={`${toggle === 3 ? "text-[#ed9022]" : null} hover:cursor-pointer`}
+            className={`${
+              toggle === 3 ? "text-[#ed9022] font-gilroyBold" : null
+            } hover:cursor-pointer`}
           >
             Branding
           </li>

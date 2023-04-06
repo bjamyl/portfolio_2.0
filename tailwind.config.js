@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      objectPosition: {
+        "custom": " bottom 10px right 20px",
+      },
       fontFamily: {
         sans: ["var(--font-syne)"],
         body: ["var(--font-inter)"],

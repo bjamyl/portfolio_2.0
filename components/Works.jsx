@@ -4,6 +4,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { FiArrowUpRight } from "react-icons/fi";
 import Card from "./Card";
 import projects from "./data";
+import Link from "next/link";
+
+// Register scrolltrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Works() {
@@ -60,27 +63,30 @@ export default function Works() {
       <div className="grid grid-cols-1 gap-y-14 2xl:grid-cols-2 2xl:space-y-32 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 2xl:gap-x-32">
         {projects &&
           projects.map((project) => (
-            <Card
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              image2={project.image2}
-            />
+            <Link key={project.id} href={project.link} >
+              <Card
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                image2={project.image2}
+              />
+            </Link>
           ))}
       </div>
-      <div className="mt-10 font-sans text-slate-50 flex justify-center text-xl xl:mt-16 md:text-2xl hover:cursor-pointer">
-        <div onMouseEnter={() => setHover(true)} onMouseLeave={()=>setHover(false)} className="flex flex-col">
-          <h3 className="flex">
-            All Projects <FiArrowUpRight />
-          </h3>
+      <Link href="/work">
+        <div className="mt-10 font-sans text-slate-50 flex justify-center text-xl xl:mt-16 md:text-2xl hover:cursor-pointer">
           <div
-            
-            ref={underline}
-            className="w-[0px] h-[1px] bg-slate-50"
-          ></div>
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            className="flex flex-col"
+          >
+            <h3 className="flex">
+              All Projects <FiArrowUpRight />
+            </h3>
+            <div ref={underline} className="w-[0px] h-[1px] bg-slate-50"></div>
+          </div>
         </div>
-      </div>
+      </Link>
     </section>
   );
 }
