@@ -16,7 +16,7 @@ export default function Hero() {
     timeline.current = gsap
       .timeline()
       .from(headerText.current, { autoAlpha:0, opacity: -50, duration: 2, delay:1.2 })
-      .from(secText.current, { autoAlpha:0, opacity: -20, duration: 0.7 });
+      .from(secText.current, { autoAlpha:0, opacity: -20, duration: 0.5 },"-=1");
   }, []);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Hero() {
             ref={ref}
             className=" h-[60%] w-full flex flex-col justify-between "
           >
-            <h2 ref={headerText} className="font-sans invisible mx-4 md:mx-8 lg:mx-10 xl:mx-20 text-5xl md:text-6xl lg:text-7xl 2xl:mx-72 2xl:text-9xl font-bold text-slate-50">
+            <h2 ref={headerText} className="font-gilroyBold invisible mx-4 md:mx-8 lg:mx-10 xl:mx-20 text-4xl md:text-6xl lg:text-7xl 2xl:mx-72 2xl:text-9xl font-bold text-slate-50">
               SOFTWARE DEVELOPER
             </h2>
             <div> 

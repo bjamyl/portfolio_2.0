@@ -25,7 +25,7 @@ export default function CustomLink({ liName, customCSS }) {
 
   return (
     <div
-      className={`font-sans text-slate-50 flex justify-center ${customCSS} hover:cursor-pointer`}
+      className={`font-gilroyBold text-slate-50 flex justify-center ${customCSS} hover:cursor-pointer`}
     >
       <div
         onMouseEnter={() => setHover(true)}

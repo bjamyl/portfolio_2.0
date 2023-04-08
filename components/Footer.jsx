@@ -111,7 +111,7 @@ export default function Footer() {
           >
             <h1
               ref={headerTxt}
-              className="invisible font-sans text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold"
+              className="invisible font-gilroyBold text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold"
             >
               LET&apos;S WORK <br /> TOGETHER
             </h1>
@@ -119,7 +119,7 @@ export default function Footer() {
           <div className="flex  justify-center">
             <p
               ref={primTxt}
-              className="invisible font-body w-[90%] md:w-[70%] text-center mt-5 xl:text-xl xl:w-[50%]"
+              className="invisible font-gilroyLight text-opacity-60 text-slate-100 w-[90%] md:w-[70%] text-center mt-5 xl:text-xl xl:w-[50%]"
             >
               I am currently looking for a remote fulltime, part-time or
               contract work. Don&apos;t hesitate to reach out, I will get back

@@ -62,7 +62,7 @@ export default function Real_estate() {
         <div className="h-fit overflow-hidden mt-10 mb-2">
           <h1
             ref={title}
-            className="invisible mx-4 md:mx-8 font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50 font-sans"
+            className="invisible mx-4 md:mx-8 font-bold text-4xl md:text-6xl lg:text-7xl  lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50 font-gilroyBold"
           >
             Real Estate
           </h1>

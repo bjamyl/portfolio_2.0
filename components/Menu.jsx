@@ -117,11 +117,11 @@ export default function Menu({ toggle, setToggle }) {
           ></div>
           <div className="absolute top-0 w-full h-full flex flex-col justify-center px-10 xl:px-20 2xl:mx-64">
             <div className="h-2/4 flex flex-col justify-between">
-              <ul className="text-slate-50  font-bold text-4xl space-y-6">
+              <ul className="text-slate-50  font-gilroyBold text-4xl space-y-6">
                 {menuData.map((menuItem) => (
                   <li
                     onClick={() => setToggle(false)}
-                    className={`hover:cursor-pointer font-sans invisible overflow-hidden xl:text-7xl ${
+                    className={`hover:cursor-pointer font-gilroyBold invisible overflow-hidden xl:text-7xl ${
                       router.pathname === menuItem.address
                         ? "text-[#ed9022]"
                         : ""

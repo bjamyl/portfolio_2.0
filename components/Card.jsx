@@ -101,7 +101,7 @@ export default function Card({ title, description, image, image2 }) {
         <div className="overflow-hidden h-fit">
           <p
             ref={desTxt}
-            className="invisible font-gilroyLight font text-slate-100 font-light text-lg text-opacity-60"
+            className="invisible font-gilroyLight  text-slate-100 font-light text-lg text-opacity-60"
           >
             {description}
           </p>

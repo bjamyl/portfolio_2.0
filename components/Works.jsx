@@ -55,7 +55,7 @@ export default function Works() {
       <div className="h-fit overflow-hidden mb-10">
         <h1
           ref={text}
-          className="mx-4 md:mx-8 font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-right lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50 font-sans"
+          className="mx-4 md:mx-8 text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-right lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50 font-gilroyBold"
         >
           WORKS
         </h1>
@@ -74,7 +74,7 @@ export default function Works() {
           ))}
       </div>
       <Link href="/work">
-        <div className="mt-10 font-sans text-slate-50 flex justify-center text-xl xl:mt-16 md:text-2xl hover:cursor-pointer">
+        <div className="mt-10 font-gilroyBold text-slate-50 flex justify-center text-xl xl:mt-16 md:text-2xl hover:cursor-pointer">
           <div
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
