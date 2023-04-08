@@ -17,6 +17,7 @@ export default function Gameshop() {
         clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
         duration: 0.5,
         ease: Power4.easeInOut,
+        delay: 1.2
       })
       .to(photo.current, {
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
@@ -27,7 +28,7 @@ export default function Gameshop() {
   return (
     <Layout title={"Projects | GameShop"}>
       <section>
-        <img
+        <Image
           ref={photo}
           src="/images/gameshop-main.jpg"
           width={1920}

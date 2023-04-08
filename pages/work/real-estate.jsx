@@ -3,6 +3,7 @@ import { Layout } from "../../components";
 import Image from "next/image";
 import gsap, { Power4 } from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { Power3 } from "gsap/dist/gsap";
 
 //Register plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -10,11 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Real_estate() {
   const title = useRef();
   const photo = useRef();
-  const mainTrig = useRef();
-  const tl1 = useRef();
-  const tl2 = useRef();
   const desTxt = useRef();
-  const secTrig = useRef();
   const leadTxt = useRef();
   const lagTxt = useRef();
 
@@ -28,46 +25,34 @@ export default function Real_estate() {
         clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
         duration: 0.5,
         ease: Power4.easeInOut,
+        delay:1.2
       })
       .to(photo.current, {
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       })
-      .from(title.current, { autoAlpha: 0, y: -50, duration: 0.7 });
-  }, []);
-
-  // Scrolltrigger animation 1 initialization
-  useEffect(() => {
-    tl1.current = gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: mainTrig.current,
-          start: "top 35%",
-          end: "top 20%",
-          scrub: true,
-        },
+      .from(title.current, { autoAlpha: 0, y: 50, duration: 0.7 })
+      .from(desTxt.current, {
+        autoAlpha: 0,
+        y: 20,
+        duration: 0.7,
+        ease: Power4.easeOut,
       })
-      .from(desTxt.current, { autoAlpha: 0, opacity: 1, duration: 0.5 });
-  }, []);
-
-  // Scrolltrigger animation 2 initialization
-  useEffect(() => {
-    tl2.current = gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: secTrig.current,
-          start: "top 35%",
-          end: "top 10%",
-          scrub: true,
-        },
-      })
-      .from(leadTxt.current, { autoAlpha: 0, opacity: 1 })
-      .from(lagTxt.current, { autoAlpha: 0, opacity: 1 });
+      .from(
+        leadTxt.current,
+        { autoAlpha: 0, opacity: 1, duration: 0.7, ease: Power4.easeOut },
+        "-=0.3"
+      )
+      .from(
+        lagTxt.current,
+        { autoAlpha: 0, opacity: 1, duration: 0.7, ease: Power4.easeOut },
+        "-=0.3"
+      );
   }, []);
 
   return (
     <Layout title={"Projects | Real Estate"}>
       <section>
-        <img
+        <Image
           ref={photo}
           src="/images/real-estate.jpg"
           width={1920}
@@ -83,25 +68,22 @@ export default function Real_estate() {
           </h1>
         </div>
         {/* Text Section 1*/}
-        <div className="h-fit overflow-hidden" ref={mainTrig}>
+        <div className="h-fit overflow-hidden">
           <h2
             ref={desTxt}
             className="font-gilroyBold invisible mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 text-[#EC9021] text-2xl xl:text-3xl"
           >
             Searching for your dream house made super easy
           </h2>
-          <div
-            ref={secTrig}
-            className="text-base leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl xl:pb-12 pb-5"
-          >
-            <p ref={leadTxt}>
+          <div className="text-base leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl xl:pb-12 pb-5">
+            <p className="invisible" ref={leadTxt}>
               Real Estate is a website for browsing and purchasing listed
               properties. Users can create accounts and access a personalized
               dashboard to track their property inquiries. User accounts are
               authenticated with{" "}
               <span className="font-gilroyBold">JSON Web Tokens</span>.
             </p>
-            <p ref={lagTxt} className="mt-5">
+            <p ref={lagTxt} className="mt-5 invisible">
               I built this personal project to better solidify my understanding
               of <span className="font-gilroyBold">Django REST Framework</span>{" "}
               and{" "}

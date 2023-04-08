@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 1,
-    title: "GameShop",
+    title: "GAMESHOP",
     description: "Development",
     image: "/images/gameshop-main.jpg",
     image2: "/images/gameshop.png",
@@ -9,7 +9,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Beyond October",
+    title: "BEYOND OCTOBER",
     description: "Brand Design",
     image: "/images/bo.jpg",
     image2: "/images/beyond.png",
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Real Estate",
+    title: "REAL ESTATE",
     description: "Development",
     image: "/images/real-estate.jpg",
     image2: "/images/real_estate.png",
