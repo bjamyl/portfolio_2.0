@@ -97,7 +97,7 @@ export default function Menu({ toggle, setToggle }) {
       id: 4,
       linkName: "CONTACT",
       num: "04",
-      address: "",
+      address: "/contact",
       ref: contact,
     },
   ];

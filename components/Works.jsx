@@ -50,6 +50,8 @@ export default function Works() {
     hover ? hoverAnim.current.play() : hoverAnim.current.reverse();
   }, [hover]);
 
+  const featured_projects = projects.slice(0,4)
+
   return (
     <section ref={trigger}>
       <div className="h-fit overflow-hidden mb-10">
@@ -60,9 +62,9 @@ export default function Works() {
           WORKS
         </h1>
       </div>
-      <div className="grid grid-cols-1 gap-y-14 2xl:grid-cols-2 2xl:space-y-32 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 2xl:gap-x-32">
-        {projects &&
-          projects.map((project) => (
+      <div className="grid grid-cols-1 gap-y-14 2xl:grid-cols-2 2xl:gap-y-32 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 2xl:gap-x-32">
+        {featured_projects &&
+          featured_projects.map((project) => (
             <Link key={project.id} href={project.link} >
               <Card
                 title={project.title}

@@ -106,10 +106,10 @@ export default function Real_estate() {
         </div>
         <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 mt-10">
           <Image
-            src="/images/gameshop/gameshop-screen1.jpg"
+            src="/images/realestate/real_estate-screen1.jpg"
             width={1980}
             height={1080}
-            alt="gameshop-screen-1"
+            alt="realestate-screen-1"
           />
         </div>
         <div className="grid my-5 xl:grid-cols-2 2xl:my-10">
@@ -162,28 +162,28 @@ export default function Real_estate() {
         </div>
         <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 space-y-10">
           <Image
-            src="/images/gameshop/gameshop-screen2.jpg"
+            src="/images/realestate/real_estate-screen2.jpg"
             width={1980}
             height={1080}
-            alt="gameshop-screen-1"
+            alt="realestate-screen-2"
           />
           <Image
-            src="/images/gameshop/gameshop-screen3.jpg"
+            src="/images/realestate/real_estate-screen3.jpg"
             width={1980}
             height={1080}
-            alt="gameshop-screen-1"
+            alt="realestate-screen-3"
           />
           <Image
-            src="/images/gameshop/gameshop-screen4.jpg"
+            src="/images/realestate/real_estate-screen4.jpg"
             width={1980}
             height={1080}
-            alt="gameshop-screen-1"
+            alt="realestate-screen-4"
           />
           <Image
-            src="/images/gameshop/gameshop-screen5.jpg"
+            src="/images/realestate/real_estate-screen6.jpg"
             width={1980}
             height={1080}
-            alt="gameshop-screen-1"
+            alt="realestate-screen-5"
           />
         </div>
       </section>

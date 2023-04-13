@@ -60,7 +60,7 @@ export default function Works() {
     }
   };
   return (
-    <Layout>
+    <Layout title={"Jamil Alhassan | Projects"}>
       <div className="pt-20">
         <h1 className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 text-4xl md:text-6xl lg:text-7xl 2xl:mx-72 2xl:text-9xl font-bold text-slate-50 font-gilroyBold">
           PROJECTS
@@ -74,7 +74,7 @@ export default function Works() {
               toggle === 1 ? "text-[#ed9022] font-gilroyBold" : null
             } hover:cursor-pointer`}
           >
-            All <span className="text-sm xl:text-xl">(3)</span>
+            All <span className="text-sm xl:text-xl">(6)</span>
           </li>
           <li
             onClick={() => toggleTab(2)}
@@ -82,7 +82,7 @@ export default function Works() {
               toggle === 2 ? "text-[#ed9022] font-gilroyBold" : null
             } hover:cursor-pointer`}
           >
-            Development <span className="text-sm xl:text-xl">(2)</span>
+            Development <span className="text-sm xl:text-xl">(4)</span>
           </li>
           <li
             onClick={() => toggleTab(3)}
@@ -90,7 +90,7 @@ export default function Works() {
               toggle === 3 ? "text-[#ed9022] font-gilroyBold" : null
             } hover:cursor-pointer`}
           >
-            Branding <span className="text-sm xl:text-xl">(1)</span>
+            Branding <span className="text-sm xl:text-xl">(2)</span>
           </li>
         </ul>
       </div>

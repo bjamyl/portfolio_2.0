@@ -141,7 +141,7 @@ export default function Footer() {
         <div className="mt-10">
           <div className="flex items-center justify-around h-fit overflow-hidden">
             {links1.map((link) => (
-              <a key={link.id} href={link.address}>
+              <a target='_blank'  key={link.id} href={link.address} rel="noreferrer">
                 <h3 ref={link.ref} className="invisible">
                   <CustomLink liName={link.linkName} customCSS={'text-xl md:text-2xl'}/>
                 </h3>
@@ -150,7 +150,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center justify-around h-fit overflow-hidden">
           {links2.map((link) => (
-              <a key={link.id} href={link.address}>
+              <a target='_blank' key={link.id} href={link.address} rel="noreferrer">
                 <h3 ref={link.ref} className="invisible">
                   <CustomLink liName={link.linkName} customCSS={'text-xl md:text-2xl'}/>
                 </h3>

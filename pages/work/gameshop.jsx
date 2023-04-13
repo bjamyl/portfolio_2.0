@@ -36,7 +36,7 @@ export default function Gameshop() {
           src="/images/gameshop-main.jpg"
           width={1920}
           height={1080}
-          alt="real-estate"
+          alt="gameshop"
         />
         <div className="h-fit overflow-hidden my-5">
           <h1
