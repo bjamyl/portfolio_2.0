@@ -1,12 +1,10 @@
-import { useEffect, useRef } from "react";
-import { Layout } from "../../components";
-import Image from "next/image";
+import { Layout, XL } from "../../components";
 import gsap, { Power4 } from "gsap/dist/gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { Power3 } from "gsap/dist/gsap";
+import { useRef, useEffect } from "react";
+import { CustomLink } from "../../components";
+import Link from "next/link";
 
-//Register plugin
-gsap.registerPlugin(ScrollTrigger);
+import Image from "next/image";
 
 export default function Real_estate() {
   const title = useRef();
@@ -25,7 +23,7 @@ export default function Real_estate() {
         clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
         duration: 0.5,
         ease: Power4.easeInOut,
-        delay:1.2
+        delay: 1.2,
       })
       .to(photo.current, {
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
@@ -50,7 +48,7 @@ export default function Real_estate() {
   }, []);
 
   return (
-    <Layout title={"Projects | Real Estate"}>
+    <Layout title={"Real Estate | Development"}>
       <section>
         <Image
           ref={photo}
@@ -59,51 +57,62 @@ export default function Real_estate() {
           height={1080}
           alt="real-estate"
         />
-        <div className="h-fit overflow-hidden mt-10 mb-2">
+        <div className="h-fit overflow-hidden my-5">
           <h1
             ref={title}
-            className="invisible mx-4 md:mx-8 font-bold text-4xl md:text-6xl lg:text-7xl  lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50 font-gilroyBold"
+            className="invisible mx-4 md:mx-8 font-gilroyBold text-4xl md:text-6xl lg:text-7xl xl:text-8xl lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50"
           >
             Real Estate
           </h1>
         </div>
-        {/* Text Section 1*/}
-        <div className="h-fit overflow-hidden">
-          <h2
-            ref={desTxt}
-            className="font-gilroyBold invisible mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 text-[#EC9021] text-2xl xl:text-3xl"
-          >
-            Searching for your dream house made super easy
-          </h2>
-          <div className="text-base leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl xl:pb-12 pb-5">
-            <p className="invisible" ref={leadTxt}>
-              Real Estate is a website for browsing and purchasing listed
-              properties. Users can create accounts and access a personalized
-              dashboard to track their property inquiries. User accounts are
-              authenticated with{" "}
-              <span className="font-gilroyBold">JSON Web Tokens</span>.
-            </p>
-            <p ref={lagTxt} className="mt-5 invisible">
-              I built this personal project to better solidify my understanding
-              of <span className="font-gilroyBold">Django REST Framework</span>{" "}
-              and{" "}
-              <span className="font-gilroyBold">
-                authentication and authorization with JSON Web Tokens
-              </span>
-            </p>
+        <div
+          id="top-text_group"
+          className="xl:flex mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72"
+        >
+          {/* Text Section 1*/}
+          <div className=" xl:w-3/4 xl:mr-6">
+            <h2 className="font-gilroyBold  text-[#EC9021] text-2xl xl:text-3xl">
+              Searching for your dream house made super easy
+            </h2>
+            <div className="text-base leading-relaxed font-gilroyLight  text-slate-200  2xl:text-xl xl:pb-12 pb-5">
+              <p className="invisible" ref={leadTxt}>
+                Real Estate is a website for browsing and purchasing listed
+                properties. Users can create accounts and access a personalized
+                dashboard to track their property inquiries. User accounts are
+                authenticated with{" "}
+                <span className="font-gilroyBold">JSON Web Tokens</span>.
+              </p>
+              <p ref={lagTxt} className="mt-5 invisible">
+                I built this personal project to better solidify my
+                understanding of{" "}
+                <span className="font-gilroyBold">Django REST Framework</span>{" "}
+                and{" "}
+                <span className="font-gilroyBold">
+                  authentication and authorization with JSON Web Tokens
+                </span>
+              </p>
+            </div>
+          </div>
+          {/* Text Section 2*/}
+          <div className="xl:ml-6">
+            <h4 className="font-gilroyBold  text-slate-100 text-2xl">
+              MY ROLE <span className="text-[#EC9021]">.</span>
+            </h4>
+            <ul className="font-gilroyLight text-slate-200 2xl:text-xl">
+              <li>UI Designer</li>
+              <li>Fullstack Developer</li>
+            </ul>
           </div>
         </div>
-        {/* Text Section 2*/}
-        <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 2xl:mt-10">
-          <h4 className="font-gilroyBold  text-slate-100 text-2xl">
-            MY ROLE <span className="text-[#EC9021]">.</span>
-          </h4>
-          <ul className="font-gilroyLight text-slate-50 2xl:text-xl">
-            <li>UI Designer</li>
-            <li>Fullstack Developer</li>
-          </ul>
+        <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 mt-10">
+          <Image
+            src="/images/gameshop/gameshop-screen1.jpg"
+            width={1980}
+            height={1080}
+            alt="gameshop-screen-1"
+          />
         </div>
-        <div className="grid xl:grid-cols-2 2xl:mt-10">
+        <div className="grid my-5 xl:grid-cols-2 2xl:my-10">
           {/* Text Section 3*/}
           <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 mt-5 xl:w-[700px]">
             <h4 className="font-gilroyBold  text-slate-100 text-2xl">
@@ -138,6 +147,44 @@ export default function Real_estate() {
               <li>PostgreSQL</li>
             </ul>
           </div>
+        </div>
+        <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72  text-slate-100 font-gilroyBold flex gap-x-5 mb-5 2xl:mb-10">
+          <Link target="_blank" href='https://myrealestateapp.vercel.app/' >
+            <CustomLink
+              liName={"View Live Site"}
+              customCSS={"text-xl md:text-2xl"}
+            />
+          </Link>
+          <Link target="_blank" href='https://github.com/bjamyl/real_estate_frontend'>
+            
+            <CustomLink liName={"GitHub"} customCSS={"text-xl md:text-2xl"} />
+          </Link>
+        </div>
+        <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 space-y-10">
+          <Image
+            src="/images/gameshop/gameshop-screen2.jpg"
+            width={1980}
+            height={1080}
+            alt="gameshop-screen-1"
+          />
+          <Image
+            src="/images/gameshop/gameshop-screen3.jpg"
+            width={1980}
+            height={1080}
+            alt="gameshop-screen-1"
+          />
+          <Image
+            src="/images/gameshop/gameshop-screen4.jpg"
+            width={1980}
+            height={1080}
+            alt="gameshop-screen-1"
+          />
+          <Image
+            src="/images/gameshop/gameshop-screen5.jpg"
+            width={1980}
+            height={1080}
+            alt="gameshop-screen-1"
+          />
         </div>
       </section>
     </Layout>

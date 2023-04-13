@@ -28,7 +28,7 @@ export default function Extras() {
           <div ref={trigger} className="overflow-hidden h-fit 2xl:mb-10">
             <h2
               ref={headerTxt}
-              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-72 2xl:text-6xl"
+              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-gilroyBold text-slate-50 2xl:mx-72 2xl:text-6xl"
             >
               I dont fancy myself a top artist but I do think I make some{" "}
               <span className="text-[#ED9022]">

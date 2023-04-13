@@ -37,30 +37,32 @@ export default function Works() {
       ));
     } else if (toggle === 2) {
       return dev_projects.map((project) => (
-        <Card
-          key={project.id}
-          title={project.title}
-          description={project.description}
-          image={project.image}
-          image2={project.image2}
-        />
+        <Link key={project.id} href={project.link}>
+          <Card
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            image2={project.image2}
+          />
+        </Link>
       ));
     } else {
       return brand_projects.map((project) => (
-        <Card
-          key={project.id}
-          title={project.title}
-          description={project.description}
-          image={project.image}
-          image2={project.image2}
-        />
+        <Link key={project.id} href={project.link}>
+          <Card
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            image2={project.image2}
+          />
+        </Link>
       ));
     }
   };
   return (
     <Layout>
       <div className="pt-20">
-        <h1 className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 text-4xl md:text-6xl lg:text-7xl 2xl:mx-72 2xl:text-9xl font-bold text-slate-50 font-sans">
+        <h1 className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 text-4xl md:text-6xl lg:text-7xl 2xl:mx-72 2xl:text-9xl font-bold text-slate-50 font-gilroyBold">
           PROJECTS
         </h1>
       </div>
@@ -72,7 +74,7 @@ export default function Works() {
               toggle === 1 ? "text-[#ed9022] font-gilroyBold" : null
             } hover:cursor-pointer`}
           >
-            All
+            All <span className="text-sm xl:text-xl">(3)</span>
           </li>
           <li
             onClick={() => toggleTab(2)}
@@ -80,7 +82,7 @@ export default function Works() {
               toggle === 2 ? "text-[#ed9022] font-gilroyBold" : null
             } hover:cursor-pointer`}
           >
-            Development
+            Development <span className="text-sm xl:text-xl">(2)</span>
           </li>
           <li
             onClick={() => toggleTab(3)}
@@ -88,7 +90,7 @@ export default function Works() {
               toggle === 3 ? "text-[#ed9022] font-gilroyBold" : null
             } hover:cursor-pointer`}
           >
-            Branding
+            Branding <span className="text-sm xl:text-xl">(1)</span>
           </li>
         </ul>
       </div>

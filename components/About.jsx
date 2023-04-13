@@ -37,16 +37,16 @@ export default function About() {
           <div ref={trig} className="overflow-hidden h-fit">
             <h2
               ref={headerText1}
-              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-72 2xl:text-6xl"
+              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-gilroyBold text-slate-50 2xl:mx-72 2xl:text-6xl"
             >
               I add value to design
             </h2>
             <h2
               ref={headerText2}
-              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-sans text-slate-50 2xl:mx-72 2xl:text-6xl"
+              className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-gilroyBold text-slate-50 2xl:mx-72 2xl:text-6xl"
             >
-              through<span className="text-[#ED9022]">simplicity</span> &
-              <span className="text-[#ED9022]">clarity</span>
+              through <span className="text-[#ED9022]">simplicity</span> &
+              <span className="text-[#ED9022]"> clarity</span>
             </h2>
           </div>
           <p

@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-screen z-50">
       <Menu toggle={toggle} setToggle={setToggle} />
       <div className="m-4 lg:mx-10 xl:my-10 xl:mx-20 2xl:mx-72 flex items-center justify-between">
-        <h2 className="text-slate-50 font-sans text-lg font-bold xl:text-xl z-50  hover:cursor-pointer">
+        <h2 className="text-slate-50 font-gilroyBold text-lg font-bold xl:text-xl z-50  hover:cursor-pointer">
           <Link href="/">
             jamilalhassan<span className="text-[#EC9021]">.</span>
           </Link>

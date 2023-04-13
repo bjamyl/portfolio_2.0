@@ -142,7 +142,7 @@ export default function Menu({ toggle, setToggle }) {
                 {links.map((link) => (
                   <li
                     key={link.id}
-                    className="hover:cursor-pointer font-bold font-sans invisible  text-slate-50 underline"
+                    className="hover:cursor-pointer hover:text-[#ed9022] font-bold font-gilroyLight invisible  text-slate-50 underline"
                     ref={link.ref}
                   >
                     <a href={link.address} target="_blank" rel="noreferrer">

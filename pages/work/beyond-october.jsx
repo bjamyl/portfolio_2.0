@@ -2,7 +2,7 @@ import { Layout } from "../../components";
 
 export default function Beyond() {
   return (
-    <Layout title={"Projects | Beyond October"}>
+    <Layout title={"Beyond October | Brand Design"}>
       <div>beyond</div>
     </Layout>
   );

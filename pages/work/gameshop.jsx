@@ -1,6 +1,8 @@
 import { Layout, XL } from "../../components";
 import gsap, { Power4 } from "gsap/dist/gsap";
 import { useRef, useEffect } from "react";
+import { CustomLink } from "../../components";
+import Link from "next/link";
 
 import Image from "next/image";
 
@@ -27,7 +29,7 @@ export default function Gameshop() {
   }, []);
 
   return (
-    <Layout title={"Projects | GameShop"}>
+    <Layout title={"Gameshop | Development"}>
       <section>
         <Image
           ref={photo}
@@ -88,7 +90,7 @@ export default function Gameshop() {
             alt="gameshop-screen-1"
           />
         </div>
-        <div className="grid xl:grid-cols-2 2xl:mt-10">
+        <div className="grid my-5 xl:grid-cols-2 2xl:my-10">
           {/* Text Section 3*/}
           <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 mt-5 xl:w-[700px]">
             <h4 className="font-gilroyBold  text-slate-100 text-2xl">
@@ -133,6 +135,17 @@ export default function Gameshop() {
               <li>Stripe</li>
             </ul>
           </div>
+        </div>
+        <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72  text-slate-100 font-gilroyBold flex gap-x-5 mb-5 2xl:mb-10">
+          <Link target="_blank" href="https://gameshopp.vercel.app/">
+            <CustomLink
+              liName={"View Live Site"}
+              customCSS={"text-xl md:text-2xl"}
+            />
+          </Link>
+          <Link target="_blank" href="https://github.com/bjamyl/gameshop_frontend_next" >
+            <CustomLink liName={"GitHub"} customCSS={"text-xl md:text-2xl"} />
+          </Link>
         </div>
         <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 space-y-10">
           <Image
