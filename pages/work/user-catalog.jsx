@@ -1,11 +1,11 @@
-import { Layout,CustomLink } from "../../components";
+import { Layout, CustomLink } from "../../components";
 import gsap, { Power4 } from "gsap/dist/gsap";
 import { useRef, useEffect } from "react";
-import Link from "next/link";
 
+import Link from "next/link";
 import Image from "next/image";
 
-export default function Gameshop() {
+export default function UserCatalog() {
   const title = useRef();
   const photo = useRef();
 
@@ -28,11 +28,11 @@ export default function Gameshop() {
   }, []);
 
   return (
-    <Layout title={"Gameshop | Development"}>
+    <Layout title={"User Product Catalog API | Development"}>
       <section>
         <Image
           ref={photo}
-          src="/images/gameshop-main.jpg"
+          src="/images/user_catalog.jpg"
           width={1920}
           height={1080}
           alt="gameshop"
@@ -42,7 +42,7 @@ export default function Gameshop() {
             ref={title}
             className="invisible mx-4 md:mx-8 font-gilroyBold text-4xl md:text-6xl lg:text-7xl xl:text-8xl lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50"
           >
-            Gameshop
+            User Product Catalog API
           </h1>
         </div>
         <div
@@ -52,21 +52,28 @@ export default function Gameshop() {
           {/* Text Section 1*/}
           <div className=" xl:w-3/4 xl:mr-6">
             <h2 className="font-gilroyBold  text-[#EC9021] text-2xl xl:text-3xl">
-              A marketplace for gamers all over the world.
+              Feature-packed API perfect for small businesses
             </h2>
             <div className="text-base leading-relaxed font-gilroyLight  text-slate-200  2xl:text-xl xl:pb-12 pb-5">
               <p>
-                GameShop is an e-commerce web app for searching and purchasing
-                everything related to gaming from gaming consoles to controllers
-                and even mouse pads.
-                <span className="font-gilroyBold">JSON Web Tokens</span>.
+                The Product Catalog API is a robust API with{" "}
+                <span className="font-gilroyBold">
+                  JWT authenticated endpoints, featuring password reset, account
+                  verification and password reset functionality.
+                </span>
               </p>
               <p className="mt-5">
-                A very useful and sometimes overlooked structure in React for
-                passing data around is{" "}
-                <span className="font-gilroyBold">Context</span>. In this
-                project, I used Context primarily to handle the complex state
-                management of shopping carts all through to checkout.
+                The application is containerized with{" "}
+                <span className="font-gilroyBold">Docker</span> and set up with
+                two microservices;{" "}
+                <span className="font-gilroyBold">Celery</span> and{" "}
+                <span className="font-gilroyBold">Redis</span>. Celery handles
+                the asynchronous task queues of sending emails with Redis acting
+                as the message broker to boost response times and overall API
+                performance.
+                <span className="font-gilroyBold"></span>. A complete
+                documentation on how to use the API was written and published
+                with Postman.
               </p>
             </div>
           </div>
@@ -76,8 +83,7 @@ export default function Gameshop() {
               MY ROLE <span className="text-[#EC9021]">.</span>
             </h4>
             <ul className="font-gilroyLight text-slate-200 2xl:text-xl">
-              <li>UI Designer</li>
-              <li>Fullstack Developer</li>
+              <li>Backend Developer</li>
             </ul>
           </div>
         </div>
@@ -98,22 +104,17 @@ export default function Gameshop() {
             <ul className="font-gilroyLight text-slate-50 2xl:text-xl">
               <li>
                 <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
-                Designed the application using Figma, Illustrator and Photoshop.
+                Containerized Django API using Docker with authenticated JWT
+                endpoints.
               </li>
               <li>
-                <span className="text-[#EC9021] font-gilroyBold">-</span> Built
-                and deployed a REST API for serving products data to the front
-                end through various API endpoints{" "}
+                <span className="text-[#EC9021] font-gilroyBold">-</span> Set up
+                asynchronous task queues with Celery and Redis as the message
+                broker to send emails and boost response times.
               </li>
               <li>
-                <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
-                Developed a responsive front-end application using NextJS;
-                translating the design into pixel-perfect code.{" "}
-              </li>
-              <li>
-                <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
-                Implemented multiple payment gateways with support for mobile
-                money using Stripe and Paystack
+                <span className="text-[#EC9021] font-gilroyBold">-</span> Wrote
+                and published documentation for the API using Postman.
               </li>
             </ul>
           </div>
@@ -123,26 +124,25 @@ export default function Gameshop() {
               TECH STACK <span className="text-[#EC9021]">.</span>
             </h4>
             <ul className="font-gilroyLight text-slate-50 2xl:text-xl">
-              <li>Figma</li>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-              <li>NextJS</li>
               <li>Django REST Framework</li>
-              <li>Tailwind CSS</li>
+              <li>Docker</li>
               <li>PostgreSQL</li>
-              <li>Paystack</li>
-              <li>Stripe</li>
+              <li>Redis</li>
+              <li>Celery</li>
             </ul>
           </div>
         </div>
         <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72  text-slate-100 font-gilroyBold flex gap-x-5 mb-5 2xl:mb-10">
-          <Link target="_blank" href="https://gameshopp.vercel.app/">
+          <Link target="_blank" href="https://documenter.getpostman.com/view/22954466/2s8YeuLBAn">
             <CustomLink
-              liName={"View Live Site"}
+              liName={"Read Documentation"}
               customCSS={"text-xl md:text-2xl"}
             />
           </Link>
-          <Link target="_blank" href="https://github.com/bjamyl/gameshop_frontend_next" >
+          <Link
+            target="_blank"
+            href="https://github.com/bjamyl/product_catalog_api"
+          >
             <CustomLink liName={"GitHub"} customCSS={"text-xl md:text-2xl"} />
           </Link>
         </div>

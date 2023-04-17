@@ -25,15 +25,16 @@ const projects = [
   },
   {
     id: 4,
-    title: "VEETA AFRIQ",
-    description: "Brand Design",
-    image: "/images/veeta-afriq.jpg",
-    image2: "/images/veeta-afriq2.jpg",
-    link: "/work/veeta-afriq"
+    title: "USER PRODUCT CATALOG API",
+    description: "Development",
+    image: "/images/user_catalog.jpg",
+    image2: "/images/user_catalog2.jpg",
+    link: "/work/user-catalog"
   },
+
   {
     id: 5,
-    title: "MOVIE REVIEWER",
+    title: "MOVIE REVIEWER API",
     description: "Development",
     image: "/images/movie.jpg",
     image2: "/images/movie2.jpg",
@@ -41,12 +42,13 @@ const projects = [
   },
   {
     id: 6,
-    title: "USER PRODUCT CATALOG",
-    description: "Development",
-    image: "/images/user_catalog.jpg",
-    image2: "/images/user_catalog2.jpg",
-    link: "/work/user-catalog"
+    title: "VEETA AFRIQ",
+    description: "Brand Design",
+    image: "/images/veeta-afriq.jpg",
+    image2: "/images/veeta-afriq2.jpg",
+    link: "/work/veeta-afriq"
   },
+
 ];
 
 export default projects;

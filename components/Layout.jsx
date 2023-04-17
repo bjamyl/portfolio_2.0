@@ -50,8 +50,8 @@ export default function Layout({ children, title, description, keywords }) {
 }
 
 Layout.defaultProps = {
-  title: "Jamil Alhassan | Fullstack Engineer, Data Analyst & Graphic Designer",
-  description: "This is my portfolio website",
+  title: "Jamil Alhassan Portfolio | Software Developer",
+  description: "Portfolio website of Jamil Banamwine Alhassan",
   keywords:
     "portfolio, software engineer, data analyst, fullstack developer, javascript, python",
 };
