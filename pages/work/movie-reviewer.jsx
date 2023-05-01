@@ -1,21 +1,21 @@
 import { Layout, CustomLink } from "../../components";
 import Link from "next/link";
-
 import Image from "next/image";
 
-export default function Gameshop() {
+export default function Moviereviewer() {
   return (
-    <Layout title={"Gameshop | Development"}>
+    <Layout title={"Movie Reviewer | Development"}>
       <section>
         <Image
-          src="/images/gameshop-main.jpg"
+          src="/images/gameshop/movies.jpg"
           width={1920}
           height={1080}
+          className="object-cover"
           alt="gameshop"
         />
         <div className="h-fit overflow-hidden my-5">
           <h1 className=" mx-4 md:mx-8 font-gilroyBold text-4xl md:text-6xl lg:text-7xl xl:text-8xl lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50">
-            Gameshop
+            Movie Reviewer
           </h1>
         </div>
         <div
@@ -25,7 +25,7 @@ export default function Gameshop() {
           {/* Text Section 1*/}
           <div className=" xl:w-3/4 xl:mr-6">
             <h2 className="font-gilroyBold  text-[#EC9021] text-2xl xl:text-3xl">
-              A marketplace for gamers all over the world.
+              Share your thoughts on every movie with the world.
             </h2>
             <div className="text-base leading-relaxed font-gilroyLight  text-slate-200  2xl:text-xl xl:pb-12 pb-5">
               <p>
@@ -49,18 +49,9 @@ export default function Gameshop() {
               MY ROLE <span className="text-[#EC9021]">.</span>
             </h4>
             <ul className="font-gilroyLight text-slate-200 2xl:text-xl">
-              <li>UI Designer</li>
-              <li>Fullstack Developer</li>
+              <li>Backend Developer</li>
             </ul>
           </div>
-        </div>
-        <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 mt-10">
-          <Image
-            src="/images/gameshop/gameshop-screen1.jpg"
-            width={1980}
-            height={1080}
-            alt="gameshop-screen-1"
-          />
         </div>
         <div className="grid my-5 xl:grid-cols-2 2xl:my-10">
           {/* Text Section 3*/}
@@ -96,57 +87,18 @@ export default function Gameshop() {
               TECH STACK <span className="text-[#EC9021]">.</span>
             </h4>
             <ul className="font-gilroyLight text-slate-50 2xl:text-xl">
-              <li>Figma</li>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-              <li>NextJS</li>
               <li>Django REST Framework</li>
-              <li>Tailwind CSS</li>
               <li>PostgreSQL</li>
-              <li>Paystack</li>
-              <li>Stripe</li>
             </ul>
           </div>
         </div>
         <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72  text-slate-100 font-gilroyBold flex gap-x-5 mb-5 2xl:mb-10">
-          <Link target="_blank" href="https://gameshopp.vercel.app/">
-            <CustomLink
-              liName={"View Live Site"}
-              customCSS={"text-xl md:text-2xl"}
-            />
-          </Link>
           <Link
             target="_blank"
             href="https://github.com/bjamyl/gameshop_frontend_next"
           >
             <CustomLink liName={"GitHub"} customCSS={"text-xl md:text-2xl"} />
           </Link>
-        </div>
-        <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 space-y-10">
-          <Image
-            src="/images/gameshop/gameshop-screen2.jpg"
-            width={1980}
-            height={1080}
-            alt="gameshop-screen-1"
-          />
-          <Image
-            src="/images/gameshop/gameshop-screen3.jpg"
-            width={1980}
-            height={1080}
-            alt="gameshop-screen-1"
-          />
-          <Image
-            src="/images/gameshop/gameshop-screen4.jpg"
-            width={1980}
-            height={1080}
-            alt="gameshop-screen-1"
-          />
-          <Image
-            src="/images/gameshop/gameshop-screen5.jpg"
-            width={1980}
-            height={1080}
-            alt="gameshop-screen-1"
-          />
         </div>
       </section>
     </Layout>

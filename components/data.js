@@ -3,32 +3,32 @@ const projects = [
     id: 1,
     title: "GAMESHOP",
     description: "Development",
-    image: "/images/gameshop-main.jpg",
-    image2: "/images/gameshop.png",
+    image: "/images/gameshop-asset2.jpg",
+    image2: "/images/gameshop-main.jpg",
     link: "/work/gameshop"
   },
   {
     id: 2,
     title: "BEYOND OCTOBER",
     description: "Brand Design",
-    image: "/images/bo.jpg",
-    image2: "/images/beyond.png",
+    image: "/images/beyond.png",
+    image2: "/images/bo.jpg",
     link: "/work/beyond-october"
   },
   {
     id: 3,
     title: "REAL ESTATE",
     description: "Development",
-    image: "/images/real-estate.jpg",
-    image2: "/images/real_estate.png",
+    image: "/images/real-estate-asset.jpg",
+    image2: "/images/real-estate.jpg",
     link: "/work/real-estate"
   },
   {
     id: 4,
-    title: "USER PRODUCT CATALOG API",
+    title: "PRODUCT CATALOG API",
     description: "Development",
-    image: "/images/user_catalog.jpg",
-    image2: "/images/user_catalog2.jpg",
+    image: "/images/products.jpg",
+    image2: "/images/user_catalog.jpg",
     link: "/work/user-catalog"
   },
 
@@ -36,8 +36,8 @@ const projects = [
     id: 5,
     title: "MOVIE REVIEWER API",
     description: "Development",
-    image: "/images/movie.jpg",
-    image2: "/images/movie2.jpg",
+    image: "/images/movies.jpg",
+    image2: "/images/movie.jpg",
     link: "/work/movie-reviewer"
   },
   {

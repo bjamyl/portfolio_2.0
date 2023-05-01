@@ -53,5 +53,5 @@ Layout.defaultProps = {
   title: "Jamil Alhassan Portfolio | Software Developer",
   description: "Portfolio website of Jamil Banamwine Alhassan",
   keywords:
-    "portfolio, software engineer, data analyst, fullstack developer, javascript, python",
+    "portfolio, software engineer, data analyst, fullstack developer, javascript developer, python developer, laravel developer",
 };

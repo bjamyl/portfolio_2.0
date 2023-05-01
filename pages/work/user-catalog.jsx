@@ -1,47 +1,20 @@
 import { Layout, CustomLink } from "../../components";
-import gsap, { Power4 } from "gsap/dist/gsap";
-import { useRef, useEffect } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
 
 export default function UserCatalog() {
-  const title = useRef();
-  const photo = useRef();
-
-  // Creating the timeline
-  const timeline = useRef();
-  //Initialting animation
-  useEffect(() => {
-    timeline.current = gsap
-      .timeline()
-      .from(photo.current, {
-        clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
-        duration: 0.5,
-        ease: Power4.easeInOut,
-        delay: 1.2,
-      })
-      .to(photo.current, {
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      })
-      .from(title.current, { autoAlpha: 0, y: -50, duration: 0.7 });
-  }, []);
-
   return (
-    <Layout title={"User Product Catalog API | Development"}>
+    <Layout title={"Product Catalog API | Development"}>
       <section>
         <Image
-          ref={photo}
           src="/images/user_catalog.jpg"
           width={1920}
           height={1080}
           alt="gameshop"
         />
         <div className="h-fit overflow-hidden my-5">
-          <h1
-            ref={title}
-            className="invisible mx-4 md:mx-8 font-gilroyBold text-4xl md:text-6xl lg:text-7xl xl:text-8xl lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50"
-          >
+          <h1 className="mx-4 md:mx-8 font-gilroyBold text-4xl md:text-6xl lg:text-7xl xl:text-8xl lg:mx-10 xl:mx-20 2xl:mx-72 text-slate-50">
             User Product Catalog API
           </h1>
         </div>
@@ -89,7 +62,7 @@ export default function UserCatalog() {
         </div>
         <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 mt-10">
           <Image
-            src="/images/gameshop/gameshop-screen1.jpg"
+            src="/images/product-catalog/credmap-1.jpg"
             width={1980}
             height={1080}
             alt="gameshop-screen-1"
@@ -133,7 +106,10 @@ export default function UserCatalog() {
           </div>
         </div>
         <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72  text-slate-100 font-gilroyBold flex gap-x-5 mb-5 2xl:mb-10">
-          <Link target="_blank" href="https://documenter.getpostman.com/view/22954466/2s8YeuLBAn">
+          <Link
+            target="_blank"
+            href="https://documenter.getpostman.com/view/22954466/2s8YeuLBAn"
+          >
             <CustomLink
               liName={"Read Documentation"}
               customCSS={"text-xl md:text-2xl"}
@@ -148,25 +124,25 @@ export default function UserCatalog() {
         </div>
         <div className="mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 space-y-10">
           <Image
-            src="/images/gameshop/gameshop-screen2.jpg"
+            src="/images/product-catalog/credmap-2.jpg"
             width={1980}
             height={1080}
             alt="gameshop-screen-1"
           />
           <Image
-            src="/images/gameshop/gameshop-screen3.jpg"
+            src="/images/product-catalog/credmap-3.jpg"
             width={1980}
             height={1080}
             alt="gameshop-screen-1"
           />
           <Image
-            src="/images/gameshop/gameshop-screen4.jpg"
+            src="/images/product-catalog/credmap-4.jpg"
             width={1980}
             height={1080}
             alt="gameshop-screen-1"
           />
           <Image
-            src="/images/gameshop/gameshop-screen5.jpg"
+            src="/images/product-catalog/credmap-5.jpg"
             width={1980}
             height={1080}
             alt="gameshop-screen-1"

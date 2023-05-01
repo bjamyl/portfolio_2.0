@@ -88,13 +88,6 @@ export default function Menu({ toggle, setToggle }) {
     },
     {
       id: 3,
-      linkName: "ABOUT",
-      num: "03",
-      address: "/about",
-      ref: about,
-    },
-    {
-      id: 4,
       linkName: "CONTACT",
       num: "04",
       address: "/contact",

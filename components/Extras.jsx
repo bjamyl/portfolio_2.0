@@ -32,7 +32,7 @@ export default function Extras() {
             >
               I dont fancy myself a top artist but I do think I make some{" "}
               <span className="text-[#ED9022]">
-                cool digital art sometimes...
+                cool art sometimes...
               </span>{" "}
             </h2>
           </div>
