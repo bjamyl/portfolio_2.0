@@ -1,5 +1,6 @@
 import gsap from "gsap/dist/gsap";
 import { useEffect, useRef } from "react";
+import CustomLink from "./CustomLink";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +64,10 @@ export default function About() {
             with backends too. I also build mobile applications and I wear a
             Data Analyst hat as well.
           </p>
-          <p ref={bodyText2} className="pt-3 pb-5 text-base invisible leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl xl:pb-12">
+          <p
+            ref={bodyText2}
+            className="pt-3 pb-5 text-base invisible leading-relaxed mx-4 font-gilroyLight md:mx-8 lg:mx-16 xl:mx-20 text-slate-50 2xl:mx-72 2xl:text-xl xl:pb-12"
+          >
             Every business has unique needs, and it is my job to understand
             those needs and design solutions that{" "}
             <span className="text-opacity-60 text-slate-100">scale</span> and{" "}
@@ -72,14 +76,16 @@ export default function About() {
             </span>
             .
           </p>
-          <a
-            ref={cv}
-            className="text-[#ED9022] invisible mx-4 font-gilroyBold md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 2xl:text-xl"
-            href="/Jamil_Banamwine_Alhassan_Resume.pdf "
-            download
-          >
-            Download CV
-          </a>
+          <div className="flex justify-start">
+            <a
+              ref={cv}
+              className="invisible mx-4 font-gilroyBold md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 2xl:text-xl"
+              href="/Jamil_Banamwine_Alhassan_Resume.pdf "
+              download
+            >
+              <CustomLink liName={"Download CV"} customCSS={"text-[#ED9022]"} />
+            </a>
+          </div>
         </div>
       </div>
     </main>
