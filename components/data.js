@@ -42,6 +42,14 @@ const projects = [
   },
   {
     id: 6,
+    title: "PORTFOLIO V1.0",
+    description: "Development",
+    image: "/images/portfolio-v1.1.jpg",
+    image2: "/images/portfolio-v1.jpg",
+    link: "/work/portfolio-v1"
+  },
+  {
+    id: 7,
     title: "VEETA AFRIQ",
     description: "Brand Design",
     image: "/images/veeta-afriq.jpg",

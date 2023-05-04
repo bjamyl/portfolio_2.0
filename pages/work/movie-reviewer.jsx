@@ -29,17 +29,12 @@ export default function Moviereviewer() {
             </h2>
             <div className="text-base leading-relaxed font-gilroyLight  text-slate-200  2xl:text-xl xl:pb-12 pb-5">
               <p>
-                GameShop is an e-commerce web app for searching and purchasing
-                everything related to gaming from gaming consoles to controllers
-                and even mouse pads.
-                <span className="font-gilroyBold">JSON Web Tokens</span>.
-              </p>
-              <p className="mt-5">
-                A very useful and sometimes overlooked structure in React for
-                passing data around is{" "}
-                <span className="font-gilroyBold">Context</span>. In this
-                project, I used Context primarily to handle the complex state
-                management of shopping carts all through to checkout.
+                The Movie Reviewer API allows users to create accounts, add
+                movies and add reviews and ratings for those movies. This API
+                can be used to build applications that allow users to explore
+                and compare different movies, read reviews, and give their own
+                ratings. It also allows users to create their own accounts and
+                follow their favorite movies.
               </p>
             </div>
           </div>
@@ -62,22 +57,17 @@ export default function Moviereviewer() {
             <ul className="font-gilroyLight text-slate-50 2xl:text-xl">
               <li>
                 <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
-                Designed the application using Figma, Illustrator and Photoshop.
-              </li>
-              <li>
-                <span className="text-[#EC9021] font-gilroyBold">-</span> Built
-                and deployed a REST API for serving products data to the front
-                end through various API endpoints{" "}
+                Developed a REST API with Django and PostgreSQL database
               </li>
               <li>
                 <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
-                Developed a responsive front-end application using NextJS;
-                translating the design into pixel-perfect code.{" "}
+                Implemented JWT authentication to secure endpoints from
+                unauthorized access.
               </li>
               <li>
-                <span className="text-[#EC9021] font-gilroyBold">-</span>{" "}
-                Implemented multiple payment gateways with support for mobile
-                money using Stripe and Paystack
+                <span className="text-[#EC9021] font-gilroyBold">-</span> Added
+                throttling features as seen in enterprise APIs to limit number
+                of requests per user account type
               </li>
             </ul>
           </div>

@@ -29,7 +29,12 @@ export default function Beyond() {
             <div className="text-base leading-relaxed font-gilroyLight  text-slate-200  2xl:text-xl xl:pb-12 pb-5">
               <p className="mt-5">
                 Beyond October is an NGO based in Ghana that is dedicated to
-                increasing breast cancer awareness...
+                raising breast cancer awareness all year round. Their mission is
+                to provide the public with resources and information to help
+                fight the disease and to provide support to those affected. They
+                are committed to educating people across the world about the
+                importance of prevention, early detection and treatment of
+                breast cancer.
               </p>
             </div>
           </div>
