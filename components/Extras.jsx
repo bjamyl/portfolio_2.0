@@ -30,10 +30,8 @@ export default function Extras() {
               ref={headerTxt}
               className="invisible mx-4 md:mx-8 lg:mx-16 text-4xl xl:mx-20 xl:text-5xl font-gilroyBold text-slate-50 2xl:mx-72 2xl:text-6xl"
             >
-              I dont fancy myself a top artist but I do think I make some{" "}
-              <span className="text-[#ED9022]">
-                cool art sometimes...
-              </span>{" "}
+              Some days I think I make
+               <span className="text-[#ED9022]"> cool art sometimes...</span>{" "}
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-y-14 2xl:grid-cols-2 2xl:gap-y-32 mx-4 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-72 2xl:gap-x-32">
