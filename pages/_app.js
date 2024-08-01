@@ -6,6 +6,7 @@ import { CSSPlugin } from "gsap/CSSPlugin";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { Syne, Poppins } from "@next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 gsap.registerPlugin(CSSPlugin);
 
 const syne = Syne({
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }) {
     <TransitionProvider>
       <TransitionLayout>
         <main className={`${syne.variable}  ${inter.variable}`}>
+          <Analytics />
           <Component {...pageProps} />
         </main>
       </TransitionLayout>
