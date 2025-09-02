@@ -80,7 +80,7 @@ export default function About() {
             <a
               ref={cv}
               className="invisible mx-4 font-gilroyBold md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-72 2xl:text-xl"
-              href="/Jamil_Banamwine_Alhassan_Resume.pdf "
+              href="/Resume_Jamil_Banamwine_Alhassan.pdf"
               download
             >
               <CustomLink liName={"Download CV"} customCSS={"text-[#ED9022]"} />
