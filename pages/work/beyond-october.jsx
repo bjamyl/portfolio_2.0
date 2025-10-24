@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Beyond() {
   return (
-    <Layout title={"Beyond October | Brand Design"}>
+    <Layout title={"Beyond October | Brand Design"} description={'Brand work done for a breast cancer awareness NGO'} keywords={"cancer, awareness, breast cancer, october, girl health, branding, logo design, identity design"}>
       <section>
         <Image
           src="/images/beyond.png"

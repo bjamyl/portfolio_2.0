@@ -41,6 +41,7 @@ export default function Layout({ children, title, description, keywords }) {
         <link rel="icon" href="/favicon.png" />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <meta name="google-site-verification" content="b8jpgkUO29PLSfkCOFZ8vjQ-6eT7VlfFIOxzSbu8Kg4" />
       </Head>
       <Navbar />
       {children}
@@ -53,5 +54,5 @@ Layout.defaultProps = {
   title: "Jamil Alhassan Portfolio | Software Developer",
   description: "Portfolio website of Jamil Banamwine Alhassan",
   keywords:
-    "portfolio, software engineer, data analyst, fullstack developer, javascript developer, python developer, laravel developer",
+    "portfolio, software engineer, data analyst, fullstack developer, javascript developer, python developer, laravel developer, creative developer",
 };

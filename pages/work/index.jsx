@@ -73,7 +73,7 @@ export default function Works() {
               toggle === 1 ? "text-[#ed9022] font-gilroyBold" : null
             } hover:cursor-pointer`}
           >
-            All <span className="text-sm xl:text-xl">(7)</span>
+            All <span className="text-sm xl:text-xl">(9)</span>
           </li>
           <li
             onClick={() => toggleTab(2)}
@@ -81,7 +81,7 @@ export default function Works() {
               toggle === 2 ? "text-[#ed9022] font-gilroyBold" : null
             } hover:cursor-pointer`}
           >
-            Development <span className="text-sm xl:text-xl">(5)</span>
+            Development <span className="text-sm xl:text-xl">(7)</span>
           </li>
           <li
             onClick={() => toggleTab(3)}

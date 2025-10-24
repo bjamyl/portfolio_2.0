@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Gameshop() {
   return (
-    <Layout title={"Gameshop | Development"}>
+    <Layout title={"Gameshop | Development"} description={"Fullstack application"}>
       <section>
         <Image
           src="/images/gameshop-main.jpg"
@@ -32,7 +32,6 @@ export default function Gameshop() {
                 GameShop is an e-commerce web app for searching and purchasing
                 everything related to gaming from gaming consoles to controllers
                 and even mouse pads.
-                <span className="font-gilroyBold">JSON Web Tokens</span>.
               </p>
               <p className="mt-5">
                 A very useful and sometimes overlooked structure in React for
@@ -98,7 +97,7 @@ export default function Gameshop() {
             <ul className="font-gilroyLight text-slate-50 2xl:text-xl">
               <li>Figma</li>
               <li>Photoshop</li>
-              <li>Illustrator</li>
+              <li>Adobe Illustrator</li>
               <li>NextJS</li>
               <li>Django REST Framework</li>
               <li>Tailwind CSS</li>

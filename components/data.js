@@ -1,4 +1,21 @@
 const projects = [
+  
+  {
+    id: 8,
+    title: "AMAL-SHADES",
+    description: "Development",
+    image: "/images/amal/womenprods.jpg",
+    image2: "/images/amal/home-mock.png",
+    link: "/work/amal-shades"
+  },
+  {
+    id: 9,
+    title: "APEX INTERVENTIONAL PAIN SPECIALISTS",
+    description: "Development",
+    image: "/images/apex/cover.jpg",
+    image2: "/images/apex/apex-mockup.png",
+    link: "/work/apex-pain"
+  },
   {
     id: 1,
     title: "GAMESHOP",
